@@ -1,0 +1,837 @@
+{
+  "B1250Y": {
+    "totaleOfferte": 17,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 16
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 16
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.88.09.00",
+        "descNorm": "portabarenodia40h80",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.57.72.02.1",
+        "descNorm": "tappodia40",
+        "conteggio": 14
+      },
+      {
+        "codice": "41.03.36.00",
+        "descNorm": "portautensilefrontale25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "41.14.10.01",
+        "descNorm": "boccoladiriduzionedia3212",
+        "conteggio": 14
+      }
+    ]
+  },
+  "B750YS": {
+    "totaleOfferte": 14,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 14
+      },
+      {
+        "codice": null,
+        "descNorm": "pedalepercomandoaperturachiusurapinzaautocentrantesumandrino",
+        "conteggio": 14
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.88.10.00",
+        "descNorm": "portautensileradialedoppio25x25",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.88.27.00",
+        "descNorm": "portabarenodia32h100",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 14
+      },
+      {
+        "codice": "10.88.09.00",
+        "descNorm": "portabarenodia40h80",
+        "conteggio": 14
+      }
+    ]
+  },
+  "B750M": {
+    "totaleOfferte": 2,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "versioniconmandrinoasa8elettromandrinoasa8foro82fornitoinalt",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "elettromandrinoasa8foro95fornitoinalternativaalmandrinostand",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "elettromandrinoasa8foro1025fornitoinalternativaalmandrinosta",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "automazioneperaperturachiusuraportascorrevoleanteriorecomand",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "kitdiforaturapercontropuntacomprendenteflangiaportapuntadia4",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "fermoregolabileinternoalmandrinoconforo82mm",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "fermoregolabileinternoalmandrinoconforo95mm",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "fermoregolabileinternoalmandrinoconforo1025mm",
+        "conteggio": 2
+      }
+    ]
+  },
+  "B750Y": {
+    "totaleOfferte": 12,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 12
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 12
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 12
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 12
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 10
+      },
+      {
+        "codice": null,
+        "descNorm": "versioniconmandrinoasa8elettromandrinoasa8foro82fornitoinalt",
+        "conteggio": 9
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 9
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 9
+      },
+      {
+        "codice": "10.88.09.00",
+        "descNorm": "portabarenodia40h80",
+        "conteggio": 9
+      },
+      {
+        "codice": "10.57.72.02.1",
+        "descNorm": "tappodia40",
+        "conteggio": 9
+      }
+    ]
+  },
+  "B1250": {
+    "totaleOfferte": 2,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "predisposizioneperlunettaaseguirecompostadacarroprogrammabil",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "kitditrasmissionepercollegamentotrapccnctramiteportaethernet",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 2
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 2
+      }
+    ]
+  },
+  "B620-Y": {
+    "totaleOfferte": 2,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "automazioneperaperturachiusuraportascorrevoleanteriorecomand",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareavitepressione40barottenibileconforodiusci",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "kitdiforaturapercontropuntacomprendenteflangiaportapuntadia4",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "disoleatoreperlaseparazionedelloliodilubrificazionedelleguid",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "impiantoarialiquidosutorrettaunoescludelaltronelpassaggiodal",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "nastrinofrontalealtorniofornitoinsostituzionedelcontenitorea",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "palettaescivoloperloscaricodeipezzilavoratifinoadunalunghezz",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "fermoregolabileinternoalmandrinoprincipaleasa5asa6",
+        "conteggio": 2
+      }
+    ]
+  },
+  "B620-YS": {
+    "totaleOfferte": 15,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 15
+      },
+      {
+        "codice": null,
+        "descNorm": "pedalepercomandoaperturachiusurapinzaautocentrantesumandrino",
+        "conteggio": 15
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 15
+      },
+      {
+        "codice": "10.88.10.00",
+        "descNorm": "portautensileradialedoppio25x25",
+        "conteggio": 15
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 15
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 15
+      },
+      {
+        "codice": "10.57.74.00",
+        "descNorm": "portabarenoarretratodia32h80",
+        "conteggio": 15
+      },
+      {
+        "codice": "41.07.02.10",
+        "descNorm": "puntalinoarrestobarra",
+        "conteggio": 15
+      },
+      {
+        "codice": "41.14.10.01",
+        "descNorm": "boccoladiriduzionedia3212",
+        "conteggio": 15
+      },
+      {
+        "codice": "41.14.10.02",
+        "descNorm": "boccoladiriduzionedia3216",
+        "conteggio": 15
+      }
+    ]
+  },
+  "B1250M": {
+    "totaleOfferte": 3,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.88.09.00",
+        "descNorm": "portabarenodia40h80",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.72.02.1",
+        "descNorm": "tappodia40",
+        "conteggio": 3
+      },
+      {
+        "codice": "41.03.36.00",
+        "descNorm": "portautensilefrontale25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "41.14.10.01",
+        "descNorm": "boccoladiriduzionedia3212",
+        "conteggio": 3
+      },
+      {
+        "codice": "41.14.10.02",
+        "descNorm": "boccoladiriduzionedia3216",
+        "conteggio": 3
+      }
+    ]
+  },
+  "B620-M": {
+    "totaleOfferte": 4,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 4
+      },
+      {
+        "codice": "T134-00242",
+        "descNorm": "wtopinzaer25predispostopercambiorapidoqf",
+        "conteggio": 4
+      },
+      {
+        "codice": "T134-00212A",
+        "descNorm": "wtopinzaer25predispostopercambiorapidoqf",
+        "conteggio": 4
+      },
+      {
+        "codice": "T012-00818",
+        "descNorm": "setdi2chiaviperer25qfeder32onehandch32unsetinclusonelladotaz",
+        "conteggio": 4
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 4
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 4
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 4
+      },
+      {
+        "codice": "0088-00047",
+        "descNorm": "portautensilepertroncatura25x25",
+        "conteggio": 4
+      },
+      {
+        "codice": "41.07.02.10",
+        "descNorm": "puntalinoarrestobarra",
+        "conteggio": 4
+      },
+      {
+        "codice": "41.14.10.01",
+        "descNorm": "boccoladiriduzionedia3212",
+        "conteggio": 4
+      }
+    ]
+  },
+  "B1250YS": {
+    "totaleOfferte": 1,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "elettromandrinoasa8foro1025caratteristichetecnichevariazioni",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "automazioneperaperturachiusuradelledueportescorrevolianterio",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "aspiratorefumienebbieoleosearfiltrazioniserieeasymod2fportat",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "pedalepercomandoaperturachiusurapinzaautocentrantesumandrino",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "disoleatoreperlaseparazionedelloliodilubrificazionedelleguid",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "predisposizionedeltornioperildialogoconuncaricatoreautomatic",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 1
+      },
+      {
+        "codice": "T016-00381",
+        "descNorm": "autocentrantea3griffedia315mmforo122mm",
+        "conteggio": 1
+      }
+    ]
+  },
+  "B750SM": {
+    "totaleOfferte": 1,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "pedalepercomandoaperturachiusurapinzaautocentrantesumandrino",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "predisposizioneperlavorazionedabarrasucontrotestaasa6complet",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "palettaescivoloperloscaricodeipezzilavoratifinoadunalunghezz",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "sbsmonitoraggiosforzoutensileabbinatoallavitautensilebigliaq",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "easybigliacyclesprogrammazionefacilitatautilizzandociclifiss",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "kitditrasmissionepercollegamentotrapccnctramiteportaethernet",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 1
+      },
+      {
+        "codice": "T016-00348",
+        "descNorm": "autocentrantea3griffedia210mmforo66mm",
+        "conteggio": 1
+      }
+    ]
+  },
+  "B750": {
+    "totaleOfferte": 1,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "versioniconmandrinoasa8elettromandrinoasa8foro82fornitoinalt",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareda25barcon10lmincompletadifiltroacartuccia",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "csschangespindlespeedsoftwarechegestiscelavariazioneautomati",
+        "conteggio": 1
+      },
+      {
+        "codice": null,
+        "descNorm": "easybigliacyclesprogrammazionefacilitatautilizzandociclifiss",
+        "conteggio": 1
+      },
+      {
+        "codice": "T016-00356",
+        "descNorm": "autocentrantea3griffedia315mmforo95mm",
+        "conteggio": 1
+      },
+      {
+        "codice": "T181-00195",
+        "descNorm": "portapinzaperpinzesempliceconodiamax100mm",
+        "conteggio": 1
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 1
+      },
+      {
+        "codice": "41.03.37.00",
+        "descNorm": "portautensileradialecorto25x25",
+        "conteggio": 1
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 1
+      }
+    ]
+  },
+  "B620-SM": {
+    "totaleOfferte": 3,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "pedalepercomandoaperturachiusurapinzaautocentrantesumandrino",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "predisposizionedeltornioperildialogoconuncaricatoreautomatic",
+        "conteggio": 3
+      },
+      {
+        "codice": "T016-00428",
+        "descNorm": "autocentrantea3griffedia165mmforo43mm",
+        "conteggio": 3
+      },
+      {
+        "codice": "T134-00242",
+        "descNorm": "wtopinzaer25predispostopercambiorapidoqf",
+        "conteggio": 3
+      },
+      {
+        "codice": "T134-00212A",
+        "descNorm": "wtopinzaer25predispostopercambiorapidoqf",
+        "conteggio": 3
+      },
+      {
+        "codice": "T012-00818",
+        "descNorm": "setdi2chiaviperer25qfeder32onehandch32unsetinclusonelladotaz",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.88.10.00",
+        "descNorm": "portautensileradialedoppio25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 3
+      }
+    ]
+  },
+  "B620-S": {
+    "totaleOfferte": 1,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 1
+      }
+    ]
+  },
+  "B620": {
+    "totaleOfferte": 2,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "sbsmonitoraggiosforzoutensileabbinatoallavitautensilebigliaq",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "kitditrasmissionepercollegamentotrapccnctramiteportaethernet",
+        "conteggio": 2
+      },
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 2
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 2
+      },
+      {
+        "codice": "0088-00047",
+        "descNorm": "portautensilepertroncatura25x25",
+        "conteggio": 2
+      },
+      {
+        "codice": "41.07.02.10",
+        "descNorm": "puntalinoarrestobarra",
+        "conteggio": 2
+      }
+    ]
+  },
+  "BMX45Y2": {
+    "totaleOfferte": 3,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensiledeltipoabraccioas",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "aspiratorefumicentrifugoperlavorazioniaumidolosmaseriedarwin",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareavitepressione40barottenibileconforodiusci",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "kitcontropuntaparallelaalcontromandrinopermettedisostenereil",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "sbsmonitoraggiosforzoutensilequestodispositivocontrollaesclu",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "autospegnimentototaledeltorniodopouncertonumerodipezzilavora",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "sostituzionedotazioneportautensilipertornituraesterna16x16co",
+        "conteggio": 3
+      },
+      {
+        "codice": "T181-00201",
+        "descNorm": "portapinzaperpinzeadoppioconodiamax45mmsolosumandrinoprincip",
+        "conteggio": 3
+      },
+      {
+        "codice": "0088-00004",
+        "descNorm": "portautensileradiale16x16",
+        "conteggio": 3
+      }
+    ]
+  }
+}

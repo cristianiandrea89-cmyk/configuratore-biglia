@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Archivo+Condensed:wght@700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bronze: #ce9041;
+  --color-dgray: #2d2926;
+  --color-gray: #cfcecf;
+  --color-offwhite: #f6f6f6;
+
+  --font-body: 'Archivo', Arial, Helvetica, sans-serif;
+  --font-heading: 'Archivo Condensed', Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-offwhite);
+  color: var(--color-dgray);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}

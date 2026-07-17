@@ -1,0 +1,1462 @@
+[
+  {
+    "id": "maceramasterb1250mn251300626",
+    "cliente": "MACERA",
+    "modello": "B1250M",
+    "numero": "251",
+    "data": "2026-06-30",
+    "dataNota": null,
+    "totale": 237185,
+    "file_origine": "MACERA_Master-B1250M_N.251-300626_"
+  },
+  {
+    "id": "maceramasterb1250yn250300626",
+    "cliente": "MACERA",
+    "modello": "B1250Y",
+    "numero": "250",
+    "data": "2026-06-30",
+    "dataNota": null,
+    "totale": 262715,
+    "file_origine": "MACERA_Master-B1250Y_N.250-300626_"
+  },
+  {
+    "id": "ocmbmx45y2n230160626",
+    "cliente": "OCM",
+    "modello": "BMX45Y2",
+    "numero": "230",
+    "data": "2026-06-16",
+    "dataNota": null,
+    "totale": null,
+    "file_origine": "ocm-_BMX_45Y2_n.230-160626_"
+  },
+  {
+    "id": "ocmbmx51y2n221110626",
+    "cliente": "OCM",
+    "modello": "BMX51Y2",
+    "numero": "221",
+    "data": "2026-06-11",
+    "dataNota": null,
+    "totale": 312100,
+    "file_origine": "ocm-BMX51_Y2_n.221-110626_"
+  },
+  {
+    "id": "ocmbmx70y2n219110626",
+    "cliente": "OCM",
+    "modello": "BMX70Y2",
+    "numero": "219",
+    "data": "2026-06-11",
+    "dataNota": null,
+    "totale": 323100,
+    "file_origine": "ocm-BMX70_Y2__n.219-110626_"
+  },
+  {
+    "id": "pmpbmx45y2conford100626",
+    "cliente": "PMP SRL",
+    "modello": "BMX45Y2",
+    "numero": null,
+    "data": "2026-06-10",
+    "dataNota": null,
+    "totale": 244000,
+    "file_origine": "pmp-_BMX_45Y2_conf.ord.100626_"
+  },
+  {
+    "id": "pmpbmx45y2conford050626",
+    "cliente": "PMP SRL",
+    "modello": "BMX45Y2",
+    "numero": null,
+    "data": "2026-06-05",
+    "dataNota": null,
+    "totale": 244000,
+    "file_origine": "pmp-_BMX_45Y2_conf.ord.050626_"
+  },
+  {
+    "id": "micromesbmx45y2n210290526",
+    "cliente": "MICROMES",
+    "modello": "BMX45Y2",
+    "numero": "210",
+    "data": "2026-05-29",
+    "dataNota": null,
+    "totale": 221100,
+    "file_origine": "micromes-_BMX_45Y2_n.210-290526"
+  },
+  {
+    "id": "pmpbmx45y2n146200526",
+    "cliente": "PMP SRL",
+    "modello": "BMX45Y2",
+    "numero": "146",
+    "data": "2026-05-20",
+    "dataNota": null,
+    "totale": 244000,
+    "file_origine": "pmp-_BMX_45Y2_n.146-200526_"
+  },
+  {
+    "id": "tmpb620mn187190526",
+    "cliente": "TMP",
+    "modello": "B620-M",
+    "numero": "187",
+    "data": "2026-05-19",
+    "dataNota": null,
+    "totale": 154400,
+    "file_origine": "tmp-B620-M_n.187-190526_"
+  },
+  {
+    "id": "lavmecb620n150220426",
+    "cliente": "LAVMEC",
+    "modello": "B620",
+    "numero": "150",
+    "data": "2026-04-22",
+    "dataNota": null,
+    "totale": 136400,
+    "file_origine": "lavmec-B620_n.150-220426_"
+  },
+  {
+    "id": "gammaplastb620mn042050226",
+    "cliente": "GAMMA PLAST",
+    "modello": "B620-M",
+    "numero": "042",
+    "data": "2026-02-05",
+    "dataNota": null,
+    "totale": 151400,
+    "file_origine": "gamma_plast-B620-M-_n.042-050226_"
+  },
+  {
+    "id": "gammaplastb620yn043050226",
+    "cliente": "GAMMA PLAST",
+    "modello": "B620-Y",
+    "numero": "043",
+    "data": "2026-02-05",
+    "dataNota": null,
+    "totale": 166400,
+    "file_origine": "gamma_plast-B620-Y__n.043-050226_"
+  },
+  {
+    "id": "steelpowerb620mn359281125",
+    "cliente": "STEEL POWER",
+    "modello": "B620-M",
+    "numero": "359",
+    "data": "2025-11-28",
+    "dataNota": null,
+    "totale": 170830,
+    "file_origine": "steel_power_b620_M_N.359-281125_"
+  },
+  {
+    "id": "euromeccanicab750yco031125",
+    "cliente": "EUROMECCANICA",
+    "modello": "B750Y",
+    "numero": null,
+    "data": "2025-11-03",
+    "dataNota": null,
+    "totale": 228142,
+    "file_origine": "euromeccanica-B750YCO-031125_"
+  },
+  {
+    "id": "powersystemb750ysn308311025",
+    "cliente": "POWER SYSTEM",
+    "modello": "B750YS",
+    "numero": "308",
+    "data": "2025-10-31",
+    "dataNota": null,
+    "totale": 288220,
+    "file_origine": "POWER_SYSTEM_-_B750_YS_N.308-311025_"
+  },
+  {
+    "id": "cgmb1250n257290925",
+    "cliente": "CMG",
+    "modello": "B1250",
+    "numero": "257",
+    "data": "2025-09-29",
+    "dataNota": null,
+    "totale": 249600,
+    "file_origine": "cgm-b1250_n.257-290925_"
+  },
+  {
+    "id": "cmgb750yn244rev1290925",
+    "cliente": "CMG",
+    "modello": "B750Y",
+    "numero": "244",
+    "data": "2025-09-29",
+    "dataNota": null,
+    "totale": 206860,
+    "file_origine": "CMG-B750Y_N.244rev.1-290925_"
+  },
+  {
+    "id": "tmpb620ysn165090625",
+    "cliente": "TMP",
+    "modello": "B620-YS",
+    "numero": "165",
+    "data": "2025-06-09",
+    "dataNota": null,
+    "totale": 190920,
+    "file_origine": "tmp-B620-YS_n.165-090625_"
+  },
+  {
+    "id": "metaltecnob750yn074240325composizione",
+    "cliente": "METALTECNO",
+    "modello": "B750Y",
+    "numero": "074",
+    "data": "2025-03-24",
+    "dataNota": null,
+    "totale": 210050,
+    "file_origine": "metaltecno-B750Y__n.074-240325__COMPOSIZIONE"
+  },
+  {
+    "id": "tecnologmeccbmx45y2n051120325",
+    "cliente": "TECNOLOGIE MECCANICHE",
+    "modello": "BMX45Y2",
+    "numero": "051",
+    "data": "2025-03-12",
+    "dataNota": null,
+    "totale": 221100,
+    "file_origine": "tecnolog._mecc-BMX_45Y2__n.051-120325_"
+  },
+  {
+    "id": "catisb620precisionn014220125",
+    "cliente": "CATIS",
+    "modello": "B620",
+    "numero": "014",
+    "data": "2025-01-22",
+    "dataNota": null,
+    "totale": 385000,
+    "file_origine": "catis-_B620_precision_n.014-220125_"
+  },
+  {
+    "id": "cmtb1250yn224101224",
+    "cliente": "CMT TAGLIONE",
+    "modello": "B1250Y",
+    "numero": "224",
+    "data": "2024-12-10",
+    "dataNota": null,
+    "totale": 214200,
+    "file_origine": "CMT_-_B1250Y_N.224-101224_"
+  },
+  {
+    "id": "steelpowerb620n215261124",
+    "cliente": "STEEL POWER",
+    "modello": "B620",
+    "numero": "215",
+    "data": "2024-11-26",
+    "dataNota": null,
+    "totale": 174130,
+    "file_origine": "steel_power-b620__n.215-261124_"
+  },
+  {
+    "id": "euromeccanicab750yn208rev1211124",
+    "cliente": "EUROMECCANICA",
+    "modello": "B750Y",
+    "numero": "208",
+    "data": "2024-11-21",
+    "dataNota": null,
+    "totale": 228142,
+    "file_origine": "euromeccanica-B750Y_n_208rev.1_211124_"
+  },
+  {
+    "id": "gramb620smn205121124",
+    "cliente": "GRAM",
+    "modello": "B620-SM",
+    "numero": "205",
+    "data": "2024-11-12",
+    "dataNota": null,
+    "totale": 230500,
+    "file_origine": "gram-B620-SM_n.205-121124_"
+  },
+  {
+    "id": "bimecb750ysn18702102024",
+    "cliente": "BIMEC",
+    "modello": "B750YS",
+    "numero": "187",
+    "data": "2024-10-02",
+    "dataNota": null,
+    "totale": 291070,
+    "file_origine": "Bimec-B750YS__n.187-02102024_"
+  },
+  {
+    "id": "ancatecb620mn093rev1090924",
+    "cliente": "ANCATEC",
+    "modello": "B620-M",
+    "numero": "093",
+    "data": "2024-09-09",
+    "dataNota": null,
+    "totale": 179940,
+    "file_origine": "ancatecB620-M_n.093rev.1-090924_"
+  },
+  {
+    "id": "biagiolib750n112150524",
+    "cliente": "BIAGIOLI",
+    "modello": "B750",
+    "numero": "112",
+    "data": "2024-05-15",
+    "dataNota": null,
+    "totale": 243940,
+    "file_origine": "biagioli-B750_n.112-150524_"
+  },
+  {
+    "id": "demassimib750n107070524",
+    "cliente": "DE MASSIMI",
+    "modello": "B750",
+    "numero": "107",
+    "data": "2024-05-07",
+    "dataNota": null,
+    "totale": 152700,
+    "file_origine": "de_massimi_-B750_n.107-070524_"
+  },
+  {
+    "id": "demassimib620n10306052024",
+    "cliente": "DE MASSIMI",
+    "modello": "B620",
+    "numero": "103",
+    "data": "2024-05-06",
+    "dataNota": null,
+    "totale": 136400,
+    "file_origine": "de_massimi-B620__n.103-06052024_"
+  },
+  {
+    "id": "euromeccanicab620yn096190424",
+    "cliente": "EUROMECCANICA",
+    "modello": "B620-Y",
+    "numero": "096",
+    "data": "2024-04-19",
+    "dataNota": null,
+    "totale": 166400,
+    "file_origine": "euromeccanica-B620-Y_n.096-190424_"
+  },
+  {
+    "id": "latechb620ysn083040424",
+    "cliente": "LATECH",
+    "modello": "B620-YS",
+    "numero": "083",
+    "data": "2024-04-04",
+    "dataNota": null,
+    "totale": 187600,
+    "file_origine": "latech-B620-YS-__n.083-040424_"
+  },
+  {
+    "id": "tecmeccprojectb620m073220324",
+    "cliente": "TEC.MECC PROJECT",
+    "modello": "B620-M",
+    "numero": null,
+    "data": "2024-03-22",
+    "dataNota": null,
+    "totale": 151400,
+    "file_origine": "tec.mecc.project_B620-M_073-220324_"
+  },
+  {
+    "id": "catisb620sn059180324",
+    "cliente": "CATIS",
+    "modello": "B620-S",
+    "numero": "059",
+    "data": "2024-03-18",
+    "dataNota": null,
+    "totale": 157600,
+    "file_origine": "catis-B620-S_n.059-180324_"
+  },
+  {
+    "id": "tmpb620mn06018032024",
+    "cliente": "TMP",
+    "modello": "B620-M",
+    "numero": "060",
+    "data": "2024-03-18",
+    "dataNota": null,
+    "totale": 151400,
+    "file_origine": "tmp-B620-M__n.060-18032024_"
+  },
+  {
+    "id": "masterb620n031200224",
+    "cliente": "GRAM",
+    "modello": "B620",
+    "numero": "031",
+    "data": "2024-02-20",
+    "dataNota": null,
+    "totale": 174600,
+    "file_origine": "Master-B620__N.031-200224_"
+  },
+  {
+    "id": "gramb620smn031190224",
+    "cliente": "GRAM",
+    "modello": "B620-SM",
+    "numero": "031",
+    "data": "2024-02-19",
+    "dataNota": null,
+    "totale": 209130,
+    "file_origine": "gram-B620-SM_n.031-190224_"
+  },
+  {
+    "id": "gramb620smn028160224",
+    "cliente": "GRAM",
+    "modello": "B620-SM",
+    "numero": "028",
+    "data": "2024-02-16",
+    "dataNota": null,
+    "totale": 218800,
+    "file_origine": "gram-B620-SM-_n.028-160224_"
+  },
+  {
+    "id": "megb1250yn017070224",
+    "cliente": "MEG",
+    "modello": "B1250Y",
+    "numero": "017",
+    "data": "2024-02-07",
+    "dataNota": null,
+    "totale": 214200,
+    "file_origine": "MEG-B1250Y_n.017-070224_"
+  },
+  {
+    "id": "tecnoacciaib750ysn011300124",
+    "cliente": "TECNOACCIAI",
+    "modello": "B750YS",
+    "numero": "011",
+    "data": "2024-01-30",
+    "dataNota": null,
+    "totale": 223800,
+    "file_origine": "tecno_acciai-B750YS__n.011-300124_"
+  },
+  {
+    "id": "listinob620steelpoower",
+    "cliente": "STEEL POWER",
+    "modello": "B620-S",
+    "numero": null,
+    "data": "2024-01-01",
+    "dataNota": "solo anno",
+    "totale": null,
+    "file_origine": "listino_b620__steelpoower"
+  },
+  {
+    "id": "faistbmx45y2n24930112023",
+    "cliente": "FAIST",
+    "modello": "BMX45Y2",
+    "numero": "249",
+    "data": "2023-11-30",
+    "dataNota": null,
+    "totale": 221100,
+    "file_origine": "faist-_BMX_45Y2_n.249-30112023_"
+  },
+  {
+    "id": "acmb620ysn23615112023",
+    "cliente": "ACM",
+    "modello": "B620-YS",
+    "numero": "236",
+    "data": "2023-11-15",
+    "dataNota": null,
+    "totale": 187600,
+    "file_origine": "acm-B620-YS__n.236-15112023_"
+  },
+  {
+    "id": "gramb620ysn20718102023",
+    "cliente": "GRAM",
+    "modello": "B620-YS",
+    "numero": "207",
+    "data": "2023-10-18",
+    "dataNota": null,
+    "totale": 187600,
+    "file_origine": "GRAM-B620-YS-_n.207-18102023_"
+  },
+  {
+    "id": "gramb620smn20017102023",
+    "cliente": "GRAM",
+    "modello": "B620-SM",
+    "numero": "200",
+    "data": "2023-10-17",
+    "dataNota": null,
+    "totale": 172600,
+    "file_origine": "gram-B620-SM-__n.200-17102023_"
+  },
+  {
+    "id": "metalcoverb750ysn190101023",
+    "cliente": "METAL COVER",
+    "modello": "B750YS",
+    "numero": "190",
+    "data": "2023-10-10",
+    "dataNota": null,
+    "totale": 266930,
+    "file_origine": "metalcover-B750YS__n.190-101023_"
+  },
+  {
+    "id": "aviointeriorsb620ysn06713042023",
+    "cliente": "AVIOINTERIORS",
+    "modello": "B620-YS",
+    "numero": "067",
+    "data": "2023-04-13",
+    "dataNota": null,
+    "totale": 187600,
+    "file_origine": "aviointeriors-B620-YS_n.067-13042023_"
+  },
+  {
+    "id": "orasb620ysn052300822rev1def310822",
+    "cliente": "ORAS",
+    "modello": "B620-YS",
+    "numero": "052",
+    "data": "2022-08-31",
+    "dataNota": null,
+    "totale": 210070,
+    "file_origine": "oras-B620-YS-_n.052-300822_rev1_def_310822"
+  },
+  {
+    "id": "alfatekb620ysn076190422",
+    "cliente": "ALFATEK",
+    "modello": "B620-YS",
+    "numero": null,
+    "data": "2022-04-19",
+    "dataNota": null,
+    "totale": 185500,
+    "file_origine": "Alfatek-B620-YS_n._076-190422_"
+  },
+  {
+    "id": "corsettib750ysoffdef160322rev2",
+    "cliente": "CORSETTI",
+    "modello": "B750YS",
+    "numero": null,
+    "data": "2022-03-16",
+    "dataNota": null,
+    "totale": 285440,
+    "file_origine": "corsetti-B750YS_OFF.DEF._160322_rev2"
+  },
+  {
+    "id": "corsettib750ysoffdef090322",
+    "cliente": "CORSETTI",
+    "modello": "B750YS",
+    "numero": null,
+    "data": "2022-03-09",
+    "dataNota": null,
+    "totale": 278440,
+    "file_origine": "corsetti-B750YS_OFF.DEF._090322_"
+  },
+  {
+    "id": "corsettib620ysn044080322",
+    "cliente": "CORSETTI",
+    "modello": "B620-YS",
+    "numero": "044",
+    "data": "2022-03-08",
+    "dataNota": null,
+    "totale": 185500,
+    "file_origine": "corsetti-B620-YS__n.044-080322_"
+  },
+  {
+    "id": "corsettib1250ysn043070322",
+    "cliente": "CORSETTI",
+    "modello": "B1250YS",
+    "numero": "043",
+    "data": "2022-03-07",
+    "dataNota": null,
+    "totale": 253400,
+    "file_origine": "CORSETTI-B1250YS_N.043-070322_"
+  },
+  {
+    "id": "corsettib750ysn030250222",
+    "cliente": "CORSETTI",
+    "modello": "B750YS",
+    "numero": "030",
+    "data": "2022-02-25",
+    "dataNota": null,
+    "totale": 222000,
+    "file_origine": "corsetti-B750YS_n.030-250222_"
+  },
+  {
+    "id": "intechb750smn018020222rev1",
+    "cliente": "INTECH",
+    "modello": "B750SM",
+    "numero": "018",
+    "data": "2022-02-02",
+    "dataNota": null,
+    "totale": 197000,
+    "file_origine": "intech-B750SM_n.018-020222_REV1"
+  },
+  {
+    "id": "polytechb750ysn011rev1270122",
+    "cliente": "POLYTECH",
+    "modello": "B750YS",
+    "numero": "011",
+    "data": "2022-01-27",
+    "dataNota": null,
+    "totale": 266930,
+    "file_origine": "polytech-B750YS__n.011rev.1-270122_"
+  },
+  {
+    "id": "amcob620mco101221",
+    "cliente": "AMCO",
+    "modello": "B620-M",
+    "numero": null,
+    "data": "2021-12-10",
+    "dataNota": null,
+    "totale": 134723,
+    "file_origine": "amco-B620-M_CO-101221_"
+  },
+  {
+    "id": "mpssugamostob620yn243071221",
+    "cliente": "MPS SUGAMOSTO",
+    "modello": "B620-Y",
+    "numero": "243",
+    "data": "2021-12-07",
+    "dataNota": null,
+    "totale": 159700,
+    "file_origine": "MPS_SUGAMOSTO_-_B620-Y-__N.243-071221_"
+  },
+  {
+    "id": "mpssugamostob1250yn245071221",
+    "cliente": "MPS SUGAMOSTO",
+    "modello": "B1250Y",
+    "numero": "245",
+    "data": "2021-12-07",
+    "dataNota": null,
+    "totale": 213600,
+    "file_origine": "MPS_SUGAMOSTO-B1250Y_N.245-071221_"
+  },
+  {
+    "id": "mpssugamostob750yn244071221",
+    "cliente": "MPS SUGAMOSTO",
+    "modello": "B750Y",
+    "numero": "244",
+    "data": "2021-12-07",
+    "dataNota": null,
+    "totale": 185500,
+    "file_origine": "MPS_SUGAMOSTO-B750Y-___N.244-071221_"
+  },
+  {
+    "id": "pmpb620ysn193defrev3141021",
+    "cliente": "PMP SRL",
+    "modello": "B620-YS",
+    "numero": "193",
+    "data": "2021-10-14",
+    "dataNota": null,
+    "totale": 291500,
+    "file_origine": "pmp-B620-YS-_n.193def_rev3_141021__"
+  },
+  {
+    "id": "amcob620mn135rev1210721",
+    "cliente": "AMCO",
+    "modello": "B620-M",
+    "numero": "135",
+    "data": "2021-07-21",
+    "dataNota": null,
+    "totale": 134723,
+    "file_origine": "amco-B620-M_n.135REV.1_210721_"
+  },
+  {
+    "id": "metinb1250mn144070721doc",
+    "cliente": "METIN",
+    "modello": "B1250M",
+    "numero": "144",
+    "data": "2021-07-07",
+    "dataNota": null,
+    "totale": 204470,
+    "file_origine": "METIN-B1250M_N.144-070721_doc"
+  },
+  {
+    "id": "polytechb750ysn141240621composizionedoc",
+    "cliente": "POLYTECH",
+    "modello": "B750YS",
+    "numero": "141",
+    "data": "2021-06-24",
+    "dataNota": null,
+    "totale": 269650,
+    "file_origine": "polytech-B750YS_n.141-240621_.COMPOSIZIONEdoc"
+  },
+  {
+    "id": "collidrillb1250ysn113120521",
+    "cliente": "COLLI DRILL",
+    "modello": "B1250YS",
+    "numero": "113",
+    "data": "2021-05-12",
+    "dataNota": null,
+    "totale": 236445,
+    "file_origine": "colli_drill-B1250YS-_n.113-120521___"
+  },
+  {
+    "id": "vegab620ys101290421",
+    "cliente": "VEGA",
+    "modello": "B620-YS",
+    "numero": null,
+    "data": "2021-04-29",
+    "dataNota": null,
+    "totale": 192770,
+    "file_origine": "vega_-B620_YS_101-290421_"
+  },
+  {
+    "id": "mazzocchiab750ysco240321",
+    "cliente": "F.LLI MAZZOCCHIA",
+    "modello": "B750YS",
+    "numero": null,
+    "data": "2021-03-24",
+    "dataNota": null,
+    "totale": 255000,
+    "file_origine": "mazzocchia-B750YS_co-240321__"
+  },
+  {
+    "id": "ggb620mn048040321",
+    "cliente": "G&G",
+    "modello": "B620-M",
+    "numero": "048",
+    "data": "2021-03-04",
+    "dataNota": null,
+    "totale": 123900,
+    "file_origine": "G_G-B620-M_N.048-040321__"
+  },
+  {
+    "id": "ggb620smn049040321",
+    "cliente": "G&G",
+    "modello": "B620-SM",
+    "numero": "049",
+    "data": "2021-03-04",
+    "dataNota": null,
+    "totale": 148300,
+    "file_origine": "g_g-B620-SM_N.049-040321__"
+  },
+  {
+    "id": "tecnomillb620mn050040321",
+    "cliente": "TEKNOMETAL",
+    "modello": "B620-M",
+    "numero": "050",
+    "data": "2021-03-04",
+    "dataNota": null,
+    "totale": 123900,
+    "file_origine": "tecnomill-_B620-M_N.050-040321__"
+  },
+  {
+    "id": "bibicib620ys012021n024120221docagg",
+    "cliente": "BIBICI",
+    "modello": "B620-YS",
+    "numero": "024",
+    "data": "2021-02-12",
+    "dataNota": null,
+    "totale": 251730,
+    "file_origine": "bibici-B620-YS-01-2021_n.024-120221___.docAGG"
+  },
+  {
+    "id": "fbfb620ysn008190121",
+    "cliente": "FBF",
+    "modello": "B620-YS",
+    "numero": "008",
+    "data": "2021-01-19",
+    "dataNota": null,
+    "totale": 179600,
+    "file_origine": "fbf-B620-YS_n.008-190121_"
+  },
+  {
+    "id": "corsettib750ysn236171220",
+    "cliente": "CORSETTI",
+    "modello": "B750YS",
+    "numero": "236",
+    "data": "2020-12-17",
+    "dataNota": null,
+    "totale": 203800,
+    "file_origine": "corsetti-B750YS_n.236-171220__"
+  },
+  {
+    "id": "mazzocchiab750smn160141020",
+    "cliente": "F.LLI MAZZOCCHIA",
+    "modello": "B750SM",
+    "numero": "160",
+    "data": "2020-10-14",
+    "dataNota": null,
+    "totale": 178200,
+    "file_origine": "mazzocchia-B750SM_n.160-141020_"
+  },
+  {
+    "id": "siempharmab750ysn099170720",
+    "cliente": "SIEMPHARMA",
+    "modello": "B750YS",
+    "numero": "099",
+    "data": "2020-07-17",
+    "dataNota": null,
+    "totale": 203800,
+    "file_origine": "siempharma-B750YS-_n.099-170720_"
+  },
+  {
+    "id": "gammaplastb1250mn070090620basd",
+    "cliente": "GAMMA PLAST",
+    "modello": "B1250M",
+    "numero": "070",
+    "data": "2020-06-09",
+    "dataNota": null,
+    "totale": 193150,
+    "file_origine": "gamma_plast-B1250M_n.070-090620B_.asd"
+  },
+  {
+    "id": "costrzferrb620yn026260220",
+    "cliente": "COSTRUZ. FERR",
+    "modello": "B620-Y",
+    "numero": "026",
+    "data": "2020-02-26",
+    "dataNota": null,
+    "totale": 155000,
+    "file_origine": "costrz.ferr-B620-Y_n.026-260220_"
+  },
+  {
+    "id": "costruzferrb1250yn022210220",
+    "cliente": "COSTRUZ. FERR",
+    "modello": "B1250Y",
+    "numero": "022",
+    "data": "2020-02-21",
+    "dataNota": null,
+    "totale": 193700,
+    "file_origine": "costruz._ferr-B1250Y_n.022-210220_"
+  },
+  {
+    "id": "optmaresb620ysn016130220",
+    "cliente": "OPTIMARES",
+    "modello": "B620-YS",
+    "numero": "016",
+    "data": "2020-02-13",
+    "dataNota": null,
+    "totale": 179600,
+    "file_origine": "OPTMARES-B620-YS_n.016-130220_"
+  },
+  {
+    "id": "biagiolib1250yn004210120",
+    "cliente": "BIAGIOLI",
+    "modello": "B1250Y",
+    "numero": "004",
+    "data": "2020-01-21",
+    "dataNota": null,
+    "totale": 193700,
+    "file_origine": "biagioli-B1250Y_n.004-210120_"
+  },
+  {
+    "id": "siempharmab1250ysn10017072",
+    "cliente": "SIEMPHARMA",
+    "modello": "B1250YS",
+    "numero": "100",
+    "data": "2020-01-01",
+    "dataNota": "solo anno",
+    "totale": 241300,
+    "file_origine": "siempharma-B1250YS_n.100-17072__"
+  },
+  {
+    "id": "demassimib1250yn213161219",
+    "cliente": "DE MASSIMI",
+    "modello": "B1250Y",
+    "numero": "213",
+    "data": "2019-12-16",
+    "dataNota": null,
+    "totale": 219640,
+    "file_origine": "de_massimi-B1250Y_n.213-161219_"
+  },
+  {
+    "id": "mpsb1250yn211101219",
+    "cliente": "MPS SUGAMOSTO",
+    "modello": "B1250Y",
+    "numero": "211",
+    "data": "2019-12-10",
+    "dataNota": null,
+    "totale": 193700,
+    "file_origine": "mps-B1250Y_n.211-101219_"
+  },
+  {
+    "id": "tecnolchib750mn202251119",
+    "cliente": "TECNOLCHI",
+    "modello": "B750M",
+    "numero": "202",
+    "data": "2019-11-25",
+    "dataNota": null,
+    "totale": 150900,
+    "file_origine": "tecnolchi-B750M_n.202-251119_"
+  },
+  {
+    "id": "tecnollchib1250mn201251119",
+    "cliente": "TECNOLCHI",
+    "modello": "B1250M",
+    "numero": "201",
+    "data": "2019-11-25",
+    "dataNota": null,
+    "totale": 167500,
+    "file_origine": "tecnollchi-B1250M_n.201-251119__"
+  },
+  {
+    "id": "aureliab1250mn159270919",
+    "cliente": "AURELIA",
+    "modello": "B1250M",
+    "numero": "159",
+    "data": "2019-09-27",
+    "dataNota": null,
+    "totale": 167500,
+    "file_origine": "aurelia-B1250M_n.159-270919_"
+  },
+  {
+    "id": "bibicib620ysn160270919",
+    "cliente": "BIBICI",
+    "modello": "B620-YS",
+    "numero": "160",
+    "data": "2019-09-27",
+    "dataNota": null,
+    "totale": 251730,
+    "file_origine": "bibici-B620-YS-_n.160-270919_"
+  },
+  {
+    "id": "costruzferrb1250ysn162270919",
+    "cliente": "COSTRUZ. FERR",
+    "modello": "B1250YS",
+    "numero": "162",
+    "data": "2019-09-27",
+    "dataNota": null,
+    "totale": 241300,
+    "file_origine": "costruz.ferr-B1250YS_n.162-270919_"
+  },
+  {
+    "id": "costruzferrb750ysn161270919",
+    "cliente": "COSTRUZ. FERR",
+    "modello": "B750YS",
+    "numero": "161",
+    "data": "2019-09-27",
+    "dataNota": null,
+    "totale": 203800,
+    "file_origine": "costruz.ferr.-B750YS_n.161-270919_"
+  },
+  {
+    "id": "mazzerb750ysn152190919",
+    "cliente": "MAZZER",
+    "modello": "B750YS",
+    "numero": "152",
+    "data": "2019-09-19",
+    "dataNota": null,
+    "totale": 203800,
+    "file_origine": "mazzer-B750YS_n.152-190919_"
+  },
+  {
+    "id": "vifrab620ysco140619",
+    "cliente": "VIFRA",
+    "modello": "B620-YS",
+    "numero": null,
+    "data": "2019-06-14",
+    "dataNota": null,
+    "totale": 180500,
+    "file_origine": "vifra-B620-YS-_co-140619_"
+  },
+  {
+    "id": "gammaplastb1250mn096040619",
+    "cliente": "GAMMA PLAST",
+    "modello": "B1250M",
+    "numero": "096",
+    "data": "2019-06-04",
+    "dataNota": null,
+    "totale": 167500,
+    "file_origine": "gamma_plast-B1250M_n.096-040619_"
+  },
+  {
+    "id": "copiadipetrolinstrb620ysn085150519",
+    "cliente": "PETROL INSTR",
+    "modello": "B620-YS",
+    "numero": "085",
+    "data": "2019-05-15",
+    "dataNota": null,
+    "totale": 218280,
+    "file_origine": "Copia_di_petrol_instr.-B620-YS_n.085-150519_"
+  },
+  {
+    "id": "pmpb1250yn106090519",
+    "cliente": "PMP SRL",
+    "modello": "B1250Y",
+    "numero": "106",
+    "data": "2019-05-09",
+    "dataNota": null,
+    "totale": 254800,
+    "file_origine": "pmp-B1250Y_n.106-090519_"
+  },
+  {
+    "id": "mazzerb620ysn053210319",
+    "cliente": "MAZZER",
+    "modello": "B620-YS",
+    "numero": "053",
+    "data": "2019-03-21",
+    "dataNota": null,
+    "totale": 179600,
+    "file_origine": "Mazzer-B620-YS_n.053-210319_"
+  },
+  {
+    "id": "bibicib620ysn017rev110219",
+    "cliente": "BIBICI",
+    "modello": "B620-YS",
+    "numero": "017",
+    "data": "2019-02-11",
+    "dataNota": null,
+    "totale": 214660,
+    "file_origine": "bibici-B620-YS-_n.017rev.-110219_"
+  },
+  {
+    "id": "pmpb1250offstd160119",
+    "cliente": "PMP SRL",
+    "modello": "B1250",
+    "numero": null,
+    "data": "2019-01-16",
+    "dataNota": null,
+    "totale": 193700,
+    "file_origine": "pmp-b1250_off.std_160119"
+  },
+  {
+    "id": "emmeppib620yn186071118",
+    "cliente": "EMMEPPI",
+    "modello": "B620-Y",
+    "numero": "186",
+    "data": "2018-11-07",
+    "dataNota": null,
+    "totale": 155000,
+    "file_origine": "EMMEPPI-B620-Y_N.186-071118_"
+  },
+  {
+    "id": "tecmeccb1250ysn189071118",
+    "cliente": "TECNOLOGIE MECCANICHE",
+    "modello": "B1250YS",
+    "numero": "189",
+    "data": "2018-11-07",
+    "dataNota": null,
+    "totale": 239300,
+    "file_origine": "tec.mecc-B1250YS_n.189-071118_"
+  },
+  {
+    "id": "ipzsb620ysn185061118",
+    "cliente": "IPZS",
+    "modello": "B620-YS",
+    "numero": "185",
+    "data": "2018-11-06",
+    "dataNota": null,
+    "totale": 210000,
+    "file_origine": "ipzs-B620-YS_n.185-061118_"
+  },
+  {
+    "id": "vifrab620ysco051118",
+    "cliente": "VIFRA",
+    "modello": "B620-YS",
+    "numero": null,
+    "data": "2018-11-05",
+    "dataNota": null,
+    "totale": 180500,
+    "file_origine": "vifra-B620-YS-_co-051118_"
+  },
+  {
+    "id": "emmeppib620ysn181311018",
+    "cliente": "EMMEPPI",
+    "modello": "B620-YS",
+    "numero": "181",
+    "data": "2018-10-31",
+    "dataNota": null,
+    "totale": 179600,
+    "file_origine": "emmeppi-B620-YS_n.181-311018_"
+  },
+  {
+    "id": "emmeppib750ysn182311018",
+    "cliente": "EMMEPPI",
+    "modello": "B750YS",
+    "numero": "182",
+    "data": "2018-10-31",
+    "dataNota": null,
+    "totale": 201800,
+    "file_origine": "emmeppi-B750YS_n.182-311018_"
+  },
+  {
+    "id": "pmpb1250yn179261018",
+    "cliente": "PMP SRL",
+    "modello": "B1250Y",
+    "numero": "179",
+    "data": "2018-10-26",
+    "dataNota": null,
+    "totale": 191700,
+    "file_origine": "pmp-B1250Y_n.179-261018_"
+  },
+  {
+    "id": "vifrab620ysn164121018def161018",
+    "cliente": "VIFRA",
+    "modello": "B620-YS",
+    "numero": "164",
+    "data": "2018-10-16",
+    "dataNota": null,
+    "totale": 253069,
+    "file_origine": "vifra-B620-YS-_n.164-121018_def._161018"
+  },
+  {
+    "id": "crumecb750ysn166151018",
+    "cliente": "CRUMEC",
+    "modello": "B750YS",
+    "numero": "166",
+    "data": "2018-10-15",
+    "dataNota": null,
+    "totale": 201800,
+    "file_origine": "crumec-B750YS_n.166-151018_"
+  },
+  {
+    "id": "petrolinstrb620ysn163051018",
+    "cliente": "PETROL INSTR",
+    "modello": "B620-YS",
+    "numero": "163",
+    "data": "2018-10-05",
+    "dataNota": null,
+    "totale": 179600,
+    "file_origine": "Petrol_instr.-B620-YS_n.163-051018_"
+  },
+  {
+    "id": "petrolb1250yn157011018",
+    "cliente": "PETROL INSTR",
+    "modello": "B1250Y",
+    "numero": "157",
+    "data": "2018-10-01",
+    "dataNota": null,
+    "totale": 187900,
+    "file_origine": "petrol-B1250Y_n.157-011018_"
+  },
+  {
+    "id": "bibicib750ysn081070518",
+    "cliente": "BIBICI",
+    "modello": "B750YS",
+    "numero": "081",
+    "data": "2018-05-07",
+    "dataNota": null,
+    "totale": 265000,
+    "file_origine": "bibici-B750YS_n.081-070518_"
+  },
+  {
+    "id": "vendittib1250yn079030518",
+    "cliente": "VENDITTI",
+    "modello": "B1250Y",
+    "numero": "079",
+    "data": "2018-05-03",
+    "dataNota": null,
+    "totale": 209740,
+    "file_origine": "venditti-b1250y_n.079-030518_"
+  },
+  {
+    "id": "alfatekb1250ysn073190418",
+    "cliente": "ALFATEK",
+    "modello": "B1250YS",
+    "numero": "073",
+    "data": "2018-04-19",
+    "dataNota": null,
+    "totale": 239300,
+    "file_origine": "alfatek-B1250YS_n.073-190418_"
+  },
+  {
+    "id": "alfatekb750ysn055290318",
+    "cliente": "ALFATEK",
+    "modello": "B750YS",
+    "numero": "055",
+    "data": "2018-03-29",
+    "dataNota": null,
+    "totale": 201800,
+    "file_origine": "alfatek-B750YS_n.055-290318_"
+  },
+  {
+    "id": "mesb1250yco140318",
+    "cliente": "MES",
+    "modello": "B1250Y",
+    "numero": null,
+    "data": "2018-03-14",
+    "dataNota": null,
+    "totale": 173605,
+    "file_origine": "Mes-B1250Y_CO-140318_"
+  },
+  {
+    "id": "ingabbateb750mn018020218",
+    "cliente": "ABBATE",
+    "modello": "B750M",
+    "numero": "018",
+    "data": "2018-02-02",
+    "dataNota": null,
+    "totale": 148900,
+    "file_origine": "ing._Abbate-B750M_n.018-020218_"
+  },
+  {
+    "id": "imfb1250yn011250118",
+    "cliente": "IMF",
+    "modello": "B1250Y",
+    "numero": "011",
+    "data": "2018-01-25",
+    "dataNota": null,
+    "totale": 191700,
+    "file_origine": "imf-B1250Y_n.011-250118_"
+  },
+  {
+    "id": "pmpb1250yn007160118",
+    "cliente": "PMP SRL",
+    "modello": "B1250Y",
+    "numero": "007",
+    "data": "2018-01-16",
+    "dataNota": null,
+    "totale": 254800,
+    "file_origine": "pmp-B1250Y_n.007-160118_"
+  },
+  {
+    "id": "mecmab1250yn169280917",
+    "cliente": "MEC.MA",
+    "modello": "B1250Y",
+    "numero": "169",
+    "data": "2017-09-28",
+    "dataNota": null,
+    "totale": 188900,
+    "file_origine": "Mecma-B1250Y_n.169-280917_"
+  },
+  {
+    "id": "mesb1250yn116180917",
+    "cliente": "MES",
+    "modello": "B1250Y",
+    "numero": "116",
+    "data": "2017-09-18",
+    "dataNota": null,
+    "totale": 188900,
+    "file_origine": "Mes-B1250Y_n.116-180917_"
+  },
+  {
+    "id": "mesb1250n161140917",
+    "cliente": "MES",
+    "modello": "B1250",
+    "numero": "161",
+    "data": "2017-09-14",
+    "dataNota": null,
+    "totale": 163100,
+    "file_origine": "mes-B1250_n.161-140917_"
+  },
+  {
+    "id": "luisab750yn123030717",
+    "cliente": "LUISA",
+    "modello": "B750Y",
+    "numero": "123",
+    "data": "2017-07-03",
+    "dataNota": null,
+    "totale": 171900,
+    "file_origine": "Luisa-B750Y-_n.123-030717_"
+  },
+  {
+    "id": "cmsb750ysn106090617",
+    "cliente": "CMS",
+    "modello": "B750YS",
+    "numero": "106",
+    "data": "2017-06-09",
+    "dataNota": null,
+    "totale": 198800,
+    "file_origine": "cms-B750YS_n.106-090617_"
+  },
+  {
+    "id": "cosmanb1250yn082160517",
+    "cliente": "COSMAN",
+    "modello": "B1250Y",
+    "numero": "082",
+    "data": "2017-05-16",
+    "dataNota": null,
+    "totale": 188900,
+    "file_origine": "cosman-B1250Y_n.082-160517_"
+  },
+  {
+    "id": "vendittib750ysn058rev1120517",
+    "cliente": "VENDITTI",
+    "modello": "B750YS",
+    "numero": "058",
+    "data": "2017-05-12",
+    "dataNota": null,
+    "totale": 197800,
+    "file_origine": "Venditti-B750YS_n.058-rev.1_120517_"
+  },
+  {
+    "id": "cecasab1250yn061030417",
+    "cliente": "CECASA",
+    "modello": "B1250Y",
+    "numero": "061",
+    "data": "2017-04-03",
+    "dataNota": null,
+    "totale": 188900,
+    "file_origine": "cecasa-B1250Y_n.061-030417_"
+  },
+  {
+    "id": "cecasab750yn060030417",
+    "cliente": "CECASA",
+    "modello": "B750Y",
+    "numero": "060",
+    "data": "2017-04-03",
+    "dataNota": null,
+    "totale": 171900,
+    "file_origine": "cecasa-B750Y_n.060-030417_"
+  },
+  {
+    "id": "offertan998b750yasa6scassellatin196131216",
+    "cliente": "KOHELER",
+    "modello": "B750Y",
+    "numero": "196",
+    "data": "2016-12-13",
+    "dataNota": null,
+    "totale": 189253,
+    "file_origine": "OFFERTA.N__998.B750Y_ASA_6.SCASSELLATI_N.196_131216"
+  },
+  {
+    "id": "silsudb1250yco251116",
+    "cliente": "SILSUD",
+    "modello": "B1250Y",
+    "numero": null,
+    "data": "2016-11-25",
+    "dataNota": null,
+    "totale": 170000,
+    "file_origine": "silsud-B1250Y_co251116_"
+  },
+  {
+    "id": "silsudb1250yn184251116",
+    "cliente": "SILSUD",
+    "modello": "B1250Y",
+    "numero": "184",
+    "data": "2016-11-25",
+    "dataNota": null,
+    "totale": 180000,
+    "file_origine": "silsud-B1250Y_n.184-251116_"
+  },
+  {
+    "id": "silsudb750yn177181116",
+    "cliente": "SILSUD",
+    "modello": "B750Y",
+    "numero": "177",
+    "data": "2016-11-18",
+    "dataNota": null,
+    "totale": 170900,
+    "file_origine": "silsud-B750Y_n.177-181116_"
+  },
+  {
+    "id": "kohelerb750yn170161116",
+    "cliente": "KOHELER",
+    "modello": "B750Y",
+    "numero": "170",
+    "data": "2016-11-16",
+    "dataNota": null,
+    "totale": 170900,
+    "file_origine": "koheler-B750Y_n.170-161116_"
+  },
+  {
+    "id": "kohlerb750mn168151116",
+    "cliente": "KOHELER",
+    "modello": "B750M",
+    "numero": "168",
+    "data": "2016-11-15",
+    "dataNota": null,
+    "totale": 145700,
+    "file_origine": "kohler-B750M_n.168-151116_"
+  },
+  {
+    "id": "tmpb750ysn161081116composizione",
+    "cliente": "TMP",
+    "modello": "B750YS",
+    "numero": "161",
+    "data": "2016-11-08",
+    "dataNota": null,
+    "totale": 238990,
+    "file_origine": "tmp-B750YS_n.161-081116_composizione"
+  },
+  {
+    "id": "biagiolib1250yn145181016",
+    "cliente": "BIAGIOLI",
+    "modello": "B1250Y",
+    "numero": "145",
+    "data": "2016-10-18",
+    "dataNota": null,
+    "totale": 187900,
+    "file_origine": "biagioli-B1250Y_n.145-181016_"
+  },
+  {
+    "id": "biagiolib1250ybn146181016",
+    "cliente": "BIAGIOLI",
+    "modello": "B1250YB",
+    "numero": "146",
+    "data": "2016-10-18",
+    "dataNota": null,
+    "totale": 202900,
+    "file_origine": "BiagioliB1250YB_n.146-181016_"
+  },
+  {
+    "id": "comepb750ysn052140416",
+    "cliente": "COMEP",
+    "modello": "B750YS",
+    "numero": "052",
+    "data": "2016-04-14",
+    "dataNota": null,
+    "totale": 197800,
+    "file_origine": "comep-B750YS_n.052-140416_"
+  },
+  {
+    "id": "offertan998b750yasa6scassellati1972",
+    "cliente": "KOHELER",
+    "modello": "B750Y",
+    "numero": null,
+    "data": "2016-01-01",
+    "dataNota": "solo anno",
+    "totale": 188703,
+    "file_origine": "OFFERTA.N__998.B750Y_ASA_6.SCASSELLATI_197_2"
+  },
+  {
+    "id": "offertan998b750yasa6scassellati",
+    "cliente": "KOHELER",
+    "modello": "B750Y",
+    "numero": null,
+    "data": "2016-01-01",
+    "dataNota": "solo anno",
+    "totale": 169673,
+    "file_origine": "OFFERTA.N__998.B750Y_ASA_6.SCASSELLATI"
+  },
+  {
+    "id": "kohelerb750yn136150715",
+    "cliente": "KOHELER",
+    "modello": "B750Y",
+    "numero": "136",
+    "data": "2015-07-15",
+    "dataNota": null,
+    "totale": 170900,
+    "file_origine": "koheler-B750Y_n.136-150715_"
+  },
+  {
+    "id": "kohelerb750mn12030062015",
+    "cliente": "KOHELER",
+    "modello": "B750M",
+    "numero": "120",
+    "data": "2015-06-30",
+    "dataNota": null,
+    "totale": 145700,
+    "file_origine": "koheler-B750M_n.120-30062015_"
+  },
+  {
+    "id": "teknomeccanicab750ysn188211014",
+    "cliente": "TEKNOMECCANICA",
+    "modello": "B750YS",
+    "numero": "188",
+    "data": "2014-10-21",
+    "dataNota": null,
+    "totale": 197800,
+    "file_origine": "teknomeccanica-B750_YS_n.188-211014_"
+  },
+  {
+    "id": "teknomeccanicab750n187211014",
+    "cliente": "TEKNOMECCANICA",
+    "modello": "B750",
+    "numero": "187",
+    "data": "2014-10-21",
+    "dataNota": null,
+    "totale": 117000,
+    "file_origine": "teknomeccanica-B750_n.187-211014_"
+  },
+  {
+    "id": "pmpb1250yn110rev1071014",
+    "cliente": "PMP SRL",
+    "modello": "B1250Y",
+    "numero": "110",
+    "data": "2014-10-07",
+    "dataNota": null,
+    "totale": 183140,
+    "file_origine": "pmp-B1250Y_n.110rev.1-071014_"
+  },
+  {
+    "id": "comeinsb750yn14025072014",
+    "cliente": "COMEINS",
+    "modello": "B750Y",
+    "numero": "140",
+    "data": "2014-07-25",
+    "dataNota": null,
+    "totale": 170900,
+    "file_origine": "comeins-B750Y_n.140-25072014_"
+  },
+  {
+    "id": "pmpb1250yco190614",
+    "cliente": "PMP SRL",
+    "modello": "B1250Y",
+    "numero": null,
+    "data": "2014-06-19",
+    "dataNota": null,
+    "totale": 225620,
+    "file_origine": "pmp-B1250Y_co-190614_"
+  },
+  {
+    "id": "comeinsb750ysn064040414",
+    "cliente": "COMEINS",
+    "modello": "B750YS",
+    "numero": "064",
+    "data": "2014-04-04",
+    "dataNota": null,
+    "totale": 197800,
+    "file_origine": "comeins-B750YS_n.064-040414_"
+  }
+]

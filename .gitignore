@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Configurazione locale di Claude Code (non codice dell'app)
+.claude/
+
+# Output intermedi dell'import Master (dati locali, non committati)
+scripts/import-output/

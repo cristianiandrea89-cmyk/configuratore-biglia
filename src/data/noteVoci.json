@@ -1,0 +1,1915 @@
+{
+  "BMX45Y2": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO PRINCIPALE & CONTROTESTA",
+      "primaVoceCodice": "T012-00870",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO PRINCIPALE & CONTROTESTA",
+      "primaVoceCodice": "T012-00869",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00128D",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00129D",
+      "testo": "Versione ASSIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00265",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Extra dotazione",
+      "primaVoceCodice": "0063-00003",
+      "testo": "+ Portautensile radiale 16x16"
+    },
+    {
+      "gruppo": "Extra dotazione",
+      "primaVoceCodice": "T183-00149",
+      "testo": "INTERNA/ESTERNA"
+    },
+    {
+      "gruppo": "Extra dotazione",
+      "primaVoceCodice": "T183-00148",
+      "testo": "INTERNA/ESTERNA"
+    },
+    {
+      "gruppo": "Extra dotazione",
+      "primaVoceCodice": "T183-00142",
+      "testo": "INTERNA/ESTERNA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00127B",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00191",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard)"
+    }
+  ],
+  "B1250M": [
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B1250MB": [
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B1250SM": [
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B1250Y": [
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B1250YB": [
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B1250YS": [
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B620": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    }
+  ],
+  "B620-M": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Su B620 arrivano a centro in finecorsa X-10"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B620-S": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    }
+  ],
+  "B620-SM": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Su B620 arrivano a centro in finecorsa X-10"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B620-Y": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Su B620 arrivano a centro in finecorsa X-10"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B620-YS": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Su B620 arrivano a centro in finecorsa X-10"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Su B620 possono ruotare ma con attenzione sulla Controtesta"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B750": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    }
+  ],
+  "B750M": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B750SM": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B750Y": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "B750YS": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 6” foro 70 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX51Y": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX51Y2": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 4 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 5” foro 52 filetto M58x1,5",
+      "primaVoceCodice": "T012-00389",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX70Y": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX70Y2": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00431",
+      "testo": "Kit di riduzione sui 5 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 6” foro 71 filetto M79x1,5",
+      "primaVoceCodice": "T012-00736",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX80Y": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ],
+  "BMX80Y2": [
+    {
+      "gruppo": "ATTREZZI di PRESA MANDRINO ASA 8” foro 82 filetto M90x1,5",
+      "primaVoceCodice": "T012-00145",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00625",
+      "testo": "Kit di riduzione sui 2 portapinza sopra elencati per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00791",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "ATTREZZI di PRESA CONTROTESTA ASA 5” foro 50 filetto M58x1,5",
+      "primaVoceCodice": "T012-00793",
+      "testo": "Kit di riduzione sul portapinza sopra elencato per pinza:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00242",
+      "testo": "Versione RADIALE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00135",
+      "testo": "Versione ASSIALE H70:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00212A",
+      "testo": "Versione ASSIALE H80 Consigliati:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00076A",
+      "testo": "Versione ASSIALE allungato H100:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00251",
+      "testo": "Versione ORIENTABILE:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00087",
+      "testo": "Versione per CREATORE"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00283",
+      "testo": "Versione per POLIGONATURA"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00309",
+      "testo": "Versione RADIALE 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00313",
+      "testo": "Versione ASSIALE H80 10.000 giri/min:"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00311",
+      "testo": "Versione ASSIALE allungato H100 10.000 giri/min :"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": "T134-00026A",
+      "testo": "Gli attacchi cilindrici, vanno gestiti con gli adattatori QF"
+    },
+    {
+      "gruppo": "Mandrinetti motorizzati",
+      "primaVoceCodice": null,
+      "testo": "I mandrinetti con refrigerante interno vanno sempre utilizzati con refrigerante attivato. E’ indispensabile utilizzare versioni con drenaggio esterno in modo tale che eventuali perdite attraverso questi condotti non finiscano all’interno della torretta, ma defluiscano in maniera visibile all’esterno."
+    },
+    {
+      "gruppo": "Chiavi di bloccaggio",
+      "primaVoceCodice": "T054-00192",
+      "testo": "Non disponibili: T054-00188 (Chiave CH24 per ghiera ER16 standard), T054-00189 (Chiave CH30 per ghiera ER20 standard), T054-00190 (Chiave per ghiera ER25 standard)"
+    }
+  ]
+}
