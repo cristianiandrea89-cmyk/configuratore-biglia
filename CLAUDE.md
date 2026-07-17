@@ -98,3 +98,8 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   diretto + riepilogo in pagina.
 - **Dev server**: `vite.config.js` forza `watch.usePolling` (cartella sincronizzata OneDrive,
   `fs.watch` nativo perde eventi) e `host: true` per testare da mobile sulla stessa Wi-Fi.
+- **Deploy**: Vercel, repo su GitHub (`cristianiandrea89-cmyk/configuratore-biglia`), push su
+  `main` = deploy automatico. `vercel.json` fa da rewrite SPA (ogni route serve `index.html`),
+  altrimenti il reload/link diretto su una route diversa da `/` darebbe 404. Variabili
+  d'ambiente (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) da impostare nelle Settings del
+  progetto Vercel, non nel repo.
