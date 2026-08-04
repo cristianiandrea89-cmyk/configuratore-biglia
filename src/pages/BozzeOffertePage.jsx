@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Trash2 } from 'lucide-react'
+import { Trash2, ChevronRight, Eye } from 'lucide-react'
 import { fetchBozze, eliminaBozza } from '../lib/offerte'
 
 function formattaPrezzo(prezzo) {
@@ -58,15 +58,32 @@ export default function BozzeOffertePage() {
       {!caricamento && bozze.length > 0 && (
         <ul className="mt-6 border border-gray/30 rounded-sm divide-y divide-gray/20">
           {bozze.map((b) => (
-            <li key={b.id} className="flex items-center gap-2 px-3 py-3 hover:bg-offwhite transition-colors">
-              <Link to={`/offerte/${b.id}/modifica`} className="flex flex-1 items-center justify-between gap-4 min-w-0 text-sm">
+            <li key={b.id} className="group flex items-center gap-2 px-3 py-3 hover:bg-bronze/10 transition-colors">
+              <Link
+                to={`/offerte/${b.id}/modifica`}
+                title="Riprendi la configurazione"
+                className="flex flex-1 items-center justify-between gap-4 min-w-0 text-sm"
+              >
                 <div className="min-w-0">
                   <p className="font-medium text-dgray truncate">{b.clienti?.ragione_sociale || '—'}</p>
                   <p className="text-dgray/70 truncate">
                     {b.numero} · {b.modelli?.nome_commerciale || '—'} · aggiornata il {formattaData(b.updated_at)}
                   </p>
                 </div>
-                <span className="font-medium text-dgray whitespace-nowrap">{formattaPrezzo(b.totale)}</span>
+                <span className="flex items-center gap-2 whitespace-nowrap">
+                  <span className="font-medium text-dgray">{formattaPrezzo(b.totale)}</span>
+                  <span className="hidden items-center gap-0.5 font-semibold text-bronze group-hover:flex">
+                    Continua
+                    <ChevronRight size={16} />
+                  </span>
+                </span>
+              </Link>
+              <Link
+                to={`/offerte/${b.id}`}
+                title="Apri riepilogo"
+                className="shrink-0 p-2 text-dgray/50 hover:text-bronze transition-colors"
+              >
+                <Eye size={16} />
               </Link>
               <button
                 type="button"
