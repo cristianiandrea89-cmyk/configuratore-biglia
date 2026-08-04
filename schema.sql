@@ -170,6 +170,7 @@ create table if not exists offerte_voci (
   offerta_id uuid not null references offerte (id) on delete cascade,
   voce_opzionale_id uuid not null references voci_opzionali (id),
   descrizione_snapshot text not null,
+  codice_snapshot text,                  -- codice catalogo (solo accessori), null per optional descrittivi
   prezzo_snapshot numeric(12,2) not null,
   quantita integer not null default 1,
   ordine integer not null default 0

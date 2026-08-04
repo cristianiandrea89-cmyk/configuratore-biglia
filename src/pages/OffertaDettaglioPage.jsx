@@ -76,6 +76,7 @@ export default function OffertaDettaglioPage() {
               return (
                 <li key={v.id} className="px-3 py-2 text-sm text-dgray">
                   {v.quantita > 1 && <span className="text-dgray/60 mr-1">N. {v.quantita} ×</span>}
+                  {v.codice_snapshot && <span className="text-dgray/60 mr-1">{v.codice_snapshot}</span>}
                   {titolo && <span className="font-semibold">{titolo} </span>}
                   {resto}
                 </li>
