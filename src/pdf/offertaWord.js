@@ -12,7 +12,21 @@ import {
   BorderStyle,
 } from 'docx'
 import logo from '../assets/logo-scassellati.png'
+import fotoB620 from '../assets/modelli/b620.png'
+import fotoB750 from '../assets/modelli/b750.png'
+import fotoB1250 from '../assets/modelli/b1250.png'
+import fotoBMX from '../assets/modelli/bmx.png'
 import { separaTitoloVoce, raggruppaSpecifiche, MACRO_SEZIONE_RE } from '../lib/testoVoce'
+
+// Foto ufficiale Biglia per serie (non esiste una foto diversa per ogni
+// variante: le varianti di una stessa serie condividono lo stesso telaio,
+// cambiano dotazioni/software non l'aspetto esterno). Fonte: bigliaspa.it.
+const FOTO_SERIE = {
+  B620: fotoB620,
+  B750: fotoB750,
+  B1250: fotoB1250,
+  BMX: fotoBMX,
+}
 
 const BRONZE = 'CE9041'
 const DGRAY = '2D2926'
@@ -69,23 +83,24 @@ function tabellaSenzaBordi(righe) {
   return new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: righe })
 }
 
-async function caricaLogo() {
-  const risposta = await fetch(logo)
+async function caricaImmagine(src, larghezza) {
+  const risposta = await fetch(src)
   const buffer = await risposta.arrayBuffer()
   const dimensioni = await new Promise((resolve) => {
     const img = new Image()
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight })
-    img.onerror = () => resolve({ width: 280, height: 80 })
-    img.src = logo
+    img.onerror = () => resolve({ width: larghezza, height: larghezza })
+    img.src = src
   })
-  const larghezza = 180
   const altezza = Math.round(larghezza * (dimensioni.height / dimensioni.width))
   return new ImageRun({ data: buffer, transformation: { width: larghezza, height: altezza }, type: 'png' })
 }
 
 export async function generaWordOfferta(offerta) {
   const { clienti: cliente, modelli: modello, voci_selezionate: voci } = offerta
-  const logoRun = await caricaLogo()
+  const logoRun = await caricaImmagine(logo, 180)
+  const fotoModelloSrc = FOTO_SERIE[modello.serie]
+  const fotoModelloRun = fotoModelloSrc ? await caricaImmagine(fotoModelloSrc, 420) : null
 
   const children = []
 
@@ -152,6 +167,12 @@ export async function generaWordOfferta(offerta) {
       ],
     })
   )
+
+  if (fotoModelloRun) {
+    children.push(
+      new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, children: [fotoModelloRun] })
+    )
+  }
 
   for (const riga of modello.descrizione_base.split('\n').filter(Boolean)) {
     const { titolo, resto } = separaTitoloVoce(riga)
