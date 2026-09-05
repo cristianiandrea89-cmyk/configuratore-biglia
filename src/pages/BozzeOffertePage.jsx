@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Trash2, ChevronRight, Eye } from 'lucide-react'
+import { Trash2, ChevronRight, Eye, Check, X } from 'lucide-react'
 import { fetchBozze, eliminaBozza } from '../lib/offerte'
 
 function formattaPrezzo(prezzo) {
@@ -18,6 +18,11 @@ export default function BozzeOffertePage() {
   const [caricamento, setCaricamento] = useState(true)
   const [errore, setErrore] = useState(null)
   const [eliminazioneId, setEliminazioneId] = useState(null)
+  // Id della bozza per cui è comparsa la richiesta di conferma inline (secondo
+  // click sul cestino per confermare davvero): niente window.confirm, che nei
+  // browser può restare silenziato dopo essere comparso più volte di fila,
+  // facendo sembrare che il pulsante non faccia nulla.
+  const [confermaId, setConfermaId] = useState(null)
 
   useEffect(() => {
     fetchBozze()
@@ -27,8 +32,7 @@ export default function BozzeOffertePage() {
   }, [])
 
   async function handleElimina(bozza) {
-    const etichetta = bozza.clienti?.ragione_sociale || bozza.numero
-    if (!window.confirm(`Eliminare definitivamente la bozza "${etichetta}"?`)) return
+    setConfermaId(null)
     setEliminazioneId(bozza.id)
     try {
       await eliminaBozza(bozza.id)
@@ -85,15 +89,37 @@ export default function BozzeOffertePage() {
               >
                 <Eye size={16} />
               </Link>
-              <button
-                type="button"
-                onClick={() => handleElimina(b)}
-                disabled={eliminazioneId === b.id}
-                title="Elimina bozza"
-                className="shrink-0 p-2 text-dgray/50 hover:text-red-600 disabled:opacity-50 transition-colors"
-              >
-                <Trash2 size={16} />
-              </button>
+              {confermaId === b.id ? (
+                <span className="flex shrink-0 items-center gap-1 text-sm">
+                  <span className="text-dgray/70 mr-1">Eliminare?</span>
+                  <button
+                    type="button"
+                    onClick={() => handleElimina(b)}
+                    disabled={eliminazioneId === b.id}
+                    title="Conferma eliminazione"
+                    className="shrink-0 p-1.5 rounded-sm bg-red-600 text-white hover:bg-red-700 disabled:opacity-50 transition-colors"
+                  >
+                    <Check size={16} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setConfermaId(null)}
+                    title="Annulla"
+                    className="shrink-0 p-1.5 rounded-sm border border-gray/40 text-dgray hover:bg-offwhite transition-colors"
+                  >
+                    <X size={16} />
+                  </button>
+                </span>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setConfermaId(b.id)}
+                  title="Elimina bozza"
+                  className="shrink-0 p-2 text-dgray/50 hover:text-red-600 transition-colors"
+                >
+                  <Trash2 size={16} />
+                </button>
+              )}
             </li>
           ))}
         </ul>
