@@ -96,6 +96,24 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   pagina; un `<iframe src={blobUrl}>` che restava nero in Chromium indipendentemente dalla
   validità del file) hanno portato a scartare del tutto anteprima e PDF in favore del Word
   diretto + riepilogo in pagina.
+- **Foto nel Word** (per allinearsi alle offerte reali, dove il venditore le incollava a mano):
+  - *Foto macchina*: una per **serie** (`src/assets/modelli/{b620,b750,b1250,bmx}.png`, scaricate
+    da bigliaspa.it/prodotti), non per singola variante — le varianti di una serie condividono lo
+    stesso telaio esterno, e anche Biglia pubblica una sola foto per serie. Selezionata via
+    `modello.serie` in `offertaWord.js`.
+  - *Foto accessori*: disegni tecnici per singolo codice a catalogo, estratti una tantum dai 26
+    Master (`scripts/estrai-foto-accessori.mjs`, richiede Word installato per la conversione
+    .doc→.docx via COM automation) e salvati in `src/assets/accessori/<codice modello>/<codice
+    voce>.png`, caricati a runtime con `import.meta.glob` e cercati per `modello.codice` +
+    `offerte_voci.codice_snapshot`. I Master usano immagini VML legacy non ancorate in modo
+    esplicito a un paragrafo: lo script deduce la corrispondenza per prossimità nel testo XML
+    (l'immagine compare nel flusso subito prima del codice a cui si riferisce) e la verifica
+    contro i codici realmente presenti a DB per quel modello, scartando l'immagine se il codice
+    più vicino non esiste — nessuna foto è meglio di una foto sbagliata. Copertura reale: **11
+    dei 26 modelli** hanno voci con `codice` valorizzato a DB (gli altri 15 hanno solo
+    `optional_macchina`, non `accessori_catalogo` — probabile buco del parsing originale dei
+    Master, non ancora indagato), e tra quei modelli ~65% delle voci con codice ha trovato una
+    foto corrispondente nella finestra di ricerca.
 - **Dev server**: `vite.config.js` forza `watch.usePolling` (cartella sincronizzata OneDrive,
   `fs.watch` nativo perde eventi) e `host: true` per testare da mobile sulla stessa Wi-Fi.
 - **Deploy**: Vercel, repo su GitHub (`cristianiandrea89-cmyk/configuratore-biglia`), push su

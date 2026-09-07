@@ -28,6 +28,24 @@ const FOTO_SERIE = {
   BMX: fotoBMX,
 }
 
+// Disegni tecnici degli accessori a catalogo, estratti una tantum dai Master
+// (scripts/estrai-foto-accessori.mjs) e salvati come src/assets/accessori/
+// <codice modello>/<codice voce>.png — non tutte le voci ne hanno una (il
+// Master non le disegna tutte, o la corrispondenza codice non è stata
+// riconosciuta con certezza: in quel caso si preferisce ometterla piuttosto
+// che rischiare di mostrare la foto sbagliata).
+const FOTO_ACCESSORI = import.meta.glob('/src/assets/accessori/**/*.{png,jpg,jpeg}', {
+  eager: true,
+  import: 'default',
+})
+
+function trovaFotoAccessorio(modelloCodice, voceCodice) {
+  if (!modelloCodice || !voceCodice) return null
+  const suffisso = `/accessori/${modelloCodice}/${voceCodice}.`
+  const chiave = Object.keys(FOTO_ACCESSORI).find((p) => p.includes(suffisso))
+  return chiave ? FOTO_ACCESSORI[chiave] : null
+}
+
 const BRONZE = 'CE9041'
 const DGRAY = '2D2926'
 
@@ -195,7 +213,7 @@ export async function generaWordOfferta(offerta) {
       const prezzoRiga = formattaPrezzo(Number(v.prezzo_snapshot) * (v.quantita || 1))
       children.push(
         new Paragraph({
-          spacing: { after: 160 },
+          spacing: { after: v.codice_snapshot ? 40 : 160 },
           alignment: AlignmentType.JUSTIFIED,
           children: [
             ...(v.quantita > 1 ? [new TextRun(`N. ${v.quantita} × `)] : []),
@@ -205,6 +223,11 @@ export async function generaWordOfferta(offerta) {
           ],
         })
       )
+      const fotoAccessorio = trovaFotoAccessorio(modello.codice, v.codice_snapshot)
+      if (fotoAccessorio) {
+        const fotoRun = await caricaImmagine(fotoAccessorio, 90)
+        children.push(new Paragraph({ spacing: { after: 160 }, children: [fotoRun] }))
+      }
     }
   }
 
