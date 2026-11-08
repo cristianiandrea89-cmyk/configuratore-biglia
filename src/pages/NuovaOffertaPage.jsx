@@ -837,27 +837,7 @@ export default function NuovaOffertaPage() {
       )}
 
       {modello && (
-        <TotaleBar totale={totale}>
-          <label className="flex items-center gap-2 text-sm text-dgray">
-            <span>Sconto</span>
-            <input
-              type="text"
-              inputMode="decimal"
-              value={sconto}
-              onChange={(e) => setSconto(e.target.value)}
-              placeholder="0"
-              className="w-16 border border-gray/40 rounded-sm px-2 py-1 text-right text-sm focus:outline-none focus:border-bronze"
-            />
-            <span>%</span>
-          </label>
-          {scontoCalcolato && (
-            <span className="text-sm text-dgray">
-              Netto riservato{' '}
-              <span className="font-semibold text-bronze">
-                {new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(scontoCalcolato.netto)}
-              </span>
-            </span>
-          )}
+        <TotaleBar totale={totale} sconto={{ valore: sconto, onChange: setSconto, calcolo: scontoCalcolato }}>
           <Button variant="primary" onClick={handleGenera} disabled={salvataggio}>
             {salvataggio ? 'Salvataggio…' : modificaId ? 'Salva modifiche' : 'Genera offerta'}
           </Button>
