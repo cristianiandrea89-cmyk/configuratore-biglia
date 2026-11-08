@@ -68,8 +68,8 @@ const MARGINI = { top: 1500, right: 900, bottom: 1200, left: 900, header: 560, f
 const LARGHEZZA_TESTO = 11906 - MARGINI.left - MARGINI.right // 10106
 
 const FONT = 'Calibri'
-const DIM_CORPO = 18 // 9pt, in mezzi punti
-const DIM_TABELLA = 16 // 8pt
+const DIM_CORPO = 22 // 11pt, in mezzi punti
+const DIM_TABELLA = 20 // 10pt
 // Palette Scassellati (src/index.css): bronzo, grigio scuro, grigio, bianco sporco.
 const BRONZO = 'CE9041'
 const GRIGIO_SCURO = '2D2926'
@@ -126,18 +126,20 @@ function run(testo, opzioni = {}) {
 }
 
 function paragrafo(children, spacing = { after: 100 }, opzioni = {}) {
-  return new Paragraph({ spacing, children, ...opzioni })
+  // keepLines: un paragrafo non si spezza mai a cavallo di due pagine.
+  return new Paragraph({ keepLines: true, spacing, children, ...opzioni })
 }
 
 // Titolo di sezione: grassetto 9,5pt, spazio sopra (come "DESCRIZIONE MACCHINA",
 // "OFFERTA ECONOMICA", "CONDIZIONI DI FORNITURA").
-function titoloSezione(testo) {
+function titoloSezione(testo, { nuovaPagina = false } = {}) {
   return new Paragraph({
+    pageBreakBefore: nuovaPagina,
     keepNext: true,
     spacing: { before: 160, after: 60 },
     // Filetto bronzo sotto il titolo di sezione (colore di accento Scassellati).
     border: { bottom: { style: BorderStyle.SINGLE, size: 8, space: 2, color: BRONZO } },
-    children: [run(testo, { bold: true, size: 19 })],
+    children: [run(testo, { bold: true, size: 28 })], // titoli di sezione 14pt
   })
 }
 
@@ -145,13 +147,14 @@ function titoloSezione(testo) {
 // ogni gruppo di accessori / versione alternativa). Paragrafi consecutivi con gli
 // stessi bordi vengono fusi da Word in un unico riquadro.
 const BORDO_RIQUADRO = { style: BorderStyle.SINGLE, size: 6, space: 1, color: GRIGIO_SCURO }
-function riquadro(testo, { primo = true, ultimo = true, bold = true, size = 19 } = {}) {
+function riquadro(testo, { primo = true, ultimo = true, bold = true, size = 24 } = {}) {
   return new Paragraph({
     alignment: AlignmentType.CENTER,
     keepNext: true,
     keepLines: true,
     spacing: { before: primo ? 200 : 0, after: ultimo ? 100 : 0 },
-    indent: { left: 400, right: 400 },
+    // Stessa larghezza delle tabelle (il bordo del paragrafo sporge ~1pt oltre il rientro).
+    indent: { left: 30, right: 30 },
     border: { top: BORDO_RIQUADRO, bottom: BORDO_RIQUADRO, left: BORDO_RIQUADRO, right: BORDO_RIQUADRO },
     shading: { type: ShadingType.CLEAR, fill: BRONZO, color: 'auto' },
     children: [run(testo, { bold, size })],
@@ -173,12 +176,14 @@ function rigaPrezzo(etichetta, importo, { grassettoEtichetta = true, etichettaRu
   })
 }
 
-function puntoElenco(runs, { livello = 0, spacing = { after: 40 } } = {}) {
+function puntoElenco(runs, { livello = 0, spacing = { after: 40 }, keepNext = false } = {}) {
   const rientro = 360 + livello * 360
   return new Paragraph({
     tabStops: [{ type: TabStopType.LEFT, position: rientro }],
     indent: { left: rientro, hanging: 220 },
     spacing,
+    keepNext,
+    keepLines: true,
     children: [run('•'), new TextRun({ children: [new Tab()], font: FONT, size: DIM_CORPO }), ...runs],
   })
 }
@@ -205,34 +210,90 @@ async function caricaImmagine(src, larghezza) {
 }
 
 // Tabella a due colonne etichetta/valore con bordi grigi (caratteristiche tecniche).
-function tabellaSpecifiche(righe) {
-  const COL_ETICHETTA = 6800
-  const COL_VALORE = LARGHEZZA_TESTO - COL_ETICHETTA
+// unita: tiene tutte le righe sulla stessa pagina (e agganciate al paragrafo seguente).
+// Righe alternate in bianco sporco e valori in grassetto per scorrere meglio le colonne.
+function tabellaSpecifiche(righe, { unita = false, larghezza = LARGHEZZA_TESTO, colEtichetta = 6800 } = {}) {
+  const colValore = larghezza - colEtichetta
   const bordi = bordiColore(GRIGIO_BORDO)
   return new Table({
+    width: { size: larghezza, type: WidthType.DXA },
+    columnWidths: [colEtichetta, colValore],
+    rows: righe.map((s, i) => {
+      const sfondo = i % 2 === 1 ? { type: ShadingType.CLEAR, fill: BIANCO_SPORCO, color: 'auto' } : undefined
+      return new TableRow({
+        cantSplit: true,
+        children: [
+          new TableCell({
+            width: { size: colEtichetta, type: WidthType.DXA },
+            borders: bordi,
+            shading: sfondo,
+            children: [paragrafo([run(s.etichetta ?? '', { size: DIM_TABELLA })], { after: 0 }, { keepNext: unita })],
+          }),
+          new TableCell({
+            width: { size: colValore, type: WidthType.DXA },
+            borders: bordi,
+            shading: sfondo,
+            children: [
+              paragrafo(
+                [run(s.valore ?? '', { size: DIM_TABELLA, bold: true })],
+                { after: 0 },
+                { alignment: AlignmentType.RIGHT, keepNext: unita }
+              ),
+            ],
+          }),
+        ],
+      })
+    }),
+  })
+}
+
+// Unità di caratteristiche tecniche: titolo (gruppo o sottogruppo) + righe etichetta/valore.
+function unitaSpecifiche(specifiche) {
+  const unita = []
+  for (const gruppo of raggruppaSpecifiche(specifiche)) {
+    let corrente = { titolo: gruppo.gruppo ? `${gruppo.gruppo}:` : null, righe: [], padre: gruppo.gruppo }
+    unita.push(corrente)
+    for (const s of gruppo.righe) {
+      if (s.valore === null) {
+        corrente = { titolo: s.etichetta, righe: [], padre: gruppo.gruppo }
+        unita.push(corrente)
+      } else {
+        corrente.righe.push(s)
+      }
+    }
+  }
+  return unita.filter((u) => u.titolo || u.righe.length > 0)
+}
+
+// Due unità corte affiancate in una tabella senza bordi (risparmia pagine).
+function coppiaAffiancata(a, b) {
+  const COL = 4953
+  const GAP = LARGHEZZA_TESTO - COL * 2
+  const cella = (u) =>
+    new TableCell({
+      width: { size: COL, type: WidthType.DXA },
+      borders: NESSUN_BORDO,
+      margins: { top: 0, bottom: 0, left: 0, right: 0 },
+      children: [
+        sottotitolo(u.titolo || '', 0),
+        tabellaSpecifiche(u.righe, { unita: true, larghezza: COL, colEtichetta: 3300 }),
+        paragrafo([], { after: 60 }),
+      ],
+    })
+  return new Table({
     width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
-    columnWidths: [COL_ETICHETTA, COL_VALORE],
-    rows: righe.map(
-      (s) =>
-        new TableRow({
-          cantSplit: true,
-          children: [
-            new TableCell({
-              width: { size: COL_ETICHETTA, type: WidthType.DXA },
-              borders: bordi,
-              shading: { type: ShadingType.CLEAR, fill: BIANCO_SPORCO, color: 'auto' },
-              children: [paragrafo([run(s.etichetta ?? '', { size: DIM_TABELLA })], { after: 0 })],
-            }),
-            new TableCell({
-              width: { size: COL_VALORE, type: WidthType.DXA },
-              borders: bordi,
-              children: [
-                paragrafo([run(s.valore ?? '', { size: DIM_TABELLA })], { after: 0 }, { alignment: AlignmentType.RIGHT }),
-              ],
-            }),
-          ],
-        })
-    ),
+    columnWidths: [COL, GAP, COL],
+    borders: { ...NESSUN_BORDO, insideHorizontal: NESSUN_BORDO.top, insideVertical: NESSUN_BORDO.top },
+    rows: [
+      new TableRow({
+        cantSplit: true,
+        children: [
+          cella(a),
+          new TableCell({ width: { size: GAP, type: WidthType.DXA }, borders: NESSUN_BORDO, children: [paragrafo([], { after: 0 })] }),
+          cella(b),
+        ],
+      }),
+    ],
   })
 }
 
@@ -255,15 +316,15 @@ function cellaEconomica(testo, larghezza, { destra = false, intestazione = false
 }
 
 function tabellaEconomica(righe, totale) {
-  const COL = [6106, 900, 1500, 1600]
+  const COL = [5806, 700, 1800, 1800]
   const intestazione = new TableRow({
     tableHeader: true,
     cantSplit: true,
     children: [
       cellaEconomica('Descrizione', COL[0], { intestazione: true }),
       cellaEconomica('Qtà', COL[1], { intestazione: true, destra: true }),
-      cellaEconomica('Valuta', COL[2], { intestazione: true, destra: true }),
-      cellaEconomica('Prezzo', COL[3], { intestazione: true, destra: true }),
+      cellaEconomica('Prezzo unit. (EUR)', COL[2], { intestazione: true, destra: true }),
+      cellaEconomica('Importo (EUR)', COL[3], { intestazione: true, destra: true }),
     ],
   })
   const corpo = righe.map(
@@ -273,15 +334,15 @@ function tabellaEconomica(righe, totale) {
         children: [
           cellaEconomica(r.descrizione, COL[0]),
           cellaEconomica(String(r.quantita), COL[1], { destra: true }),
-          cellaEconomica('EUR', COL[2], { destra: true }),
-          cellaEconomica(formattaImporto(r.importo), COL[3], { destra: true }),
+          cellaEconomica(formattaImporto(r.unitario), COL[2], { destra: true }),
+          cellaEconomica(formattaImporto(r.importo), COL[3], { destra: true, grassetto: true }),
         ],
       })
   )
   const rigaTotale = new TableRow({
     cantSplit: true,
     children: [
-      cellaEconomica('Totale offerta (IVA esclusa)', COL[0] + COL[1] + COL[2], {
+      cellaEconomica('TOTALE OFFERTA (IVA esclusa)', COL[0] + COL[1] + COL[2], {
         intestazione: true,
         destra: true,
         span: 3,
@@ -294,6 +355,65 @@ function tabellaEconomica(righe, totale) {
     width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
     columnWidths: COL,
     rows: [intestazione, ...corpo, rigaTotale],
+  })
+}
+
+// Scheda di sintesi in testa all'offerta: totale in evidenza + dati commerciali chiave,
+// così chi legge trova subito prezzo, consegna, pagamento, garanzia e validità.
+function schedaSintesi(offerta, modello, numeroVoci) {
+  const META = LARGHEZZA_TESTO / 2
+  const bordi = bordiColore(GRIGIO_BORDO)
+  const totaleAccessori = Number(offerta.totale) - Number(offerta.prezzo_base_snapshot)
+  const campo = (etichetta, valore, grande = false) => [
+    paragrafo([run(etichetta.toUpperCase(), { size: 16, color: '7A746F' })], { after: 0 }, { keepNext: true }),
+    paragrafo([run(valore || '—', { size: grande ? 22 : 20, bold: grande })], { after: 0 }),
+  ]
+  const cella = (children) =>
+    new TableCell({
+      width: { size: META, type: WidthType.DXA },
+      borders: bordi,
+      shading: { type: ShadingType.CLEAR, fill: BIANCO_SPORCO, color: 'auto' },
+      margins: { top: 60, bottom: 60, left: 120, right: 120 },
+      children,
+    })
+  const riga = (sx, dx) => new TableRow({ cantSplit: true, children: [cella(sx), cella(dx)] })
+  const barra = (testo, destra) =>
+    new TableCell({
+      width: { size: META, type: WidthType.DXA },
+      borders: bordiColore(GRIGIO_SCURO),
+      shading: { type: ShadingType.CLEAR, fill: GRIGIO_SCURO, color: 'auto' },
+      margins: { top: 80, bottom: 80, left: 120, right: 120 },
+      children: [
+        paragrafo(
+          [run(testo, { bold: true, size: destra ? 28 : 22, color: 'FFFFFF' })],
+          { after: 0 },
+          { alignment: destra ? AlignmentType.RIGHT : AlignmentType.LEFT, keepNext: true }
+        ),
+      ],
+    })
+  return new Table({
+    width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
+    columnWidths: [META, META],
+    rows: [
+      new TableRow({
+        cantSplit: true,
+        children: [
+          barra('SINTESI DELL’OFFERTA', false),
+          barra(`EUR ${formattaImporto(offerta.totale)}`, true),
+        ],
+      }),
+      riga(campo('Macchina', modello.nome_commerciale, true), campo('Consegna', offerta.consegna)),
+      riga(campo('Prezzo macchina base', `EUR ${formattaImporto(offerta.prezzo_base_snapshot)}`, true), campo('Resa', offerta.resa)),
+      riga(
+        campo(
+          numeroVoci > 0 ? `Accessori e optional (${numeroVoci})` : 'Accessori e optional',
+          numeroVoci > 0 ? `EUR ${formattaImporto(totaleAccessori)}` : 'nessuno',
+          true
+        ),
+        campo('Pagamento', offerta.pagamento)
+      ),
+      riga(campo('Validità offerta', offerta.validita_offerta), campo('Garanzia', offerta.garanzia)),
+    ],
   })
 }
 
@@ -332,7 +452,7 @@ function costruisciIntestazione(logoRun, badgeRun) {
 }
 
 function costruisciPiePagina(numeroOfferta) {
-  const riga = (testo) => new Paragraph({ spacing: { after: 0 }, children: [run(testo, { size: 15 })] })
+  const riga = (testo) => new Paragraph({ spacing: { after: 0 }, children: [run(testo, { size: 18 })] })
   return new Footer({
     children: [
       new Paragraph({
@@ -352,9 +472,9 @@ function costruisciPiePagina(numeroOfferta) {
           new TextRun({
             children: ['Pagina ', PageNumber.CURRENT, ' di ', PageNumber.TOTAL_PAGES],
             font: FONT,
-            size: 15,
+            size: 18,
           }),
-          run(`   OFF.N°${numeroOfferta}`, { size: 15 }),
+          run(`   OFF.N°${numeroOfferta}`, { size: 18 }),
         ],
       }),
     ],
@@ -366,7 +486,7 @@ export async function generaWordOfferta(offerta) {
   const logoRun = await caricaImmagine(logo, 200)
   const badgeRun = await caricaImmagine(isoBadge, 55)
   const fotoModelloSrc = FOTO_SERIE[modello.serie]
-  const fotoModelloRun = fotoModelloSrc ? await caricaImmagine(fotoModelloSrc, 330) : null
+  const fotoModelloRun = fotoModelloSrc ? await caricaImmagine(fotoModelloSrc, 470) : null
 
   const children = []
 
@@ -374,7 +494,7 @@ export async function generaWordOfferta(offerta) {
   const COL_DATA = 4800
   const COL_DEST = LARGHEZZA_TESTO - COL_DATA
   const rigaDest = (testo, bold = false) =>
-    new Paragraph({ spacing: { after: 0 }, children: [run(testo, { size: 20, bold })] })
+    new Paragraph({ spacing: { after: 0 }, children: [run(testo, { size: 24, bold })] })
   const destinatario = [rigaDest('Spett.le')]
   destinatario.push(rigaDest(cliente?.ragione_sociale ? cliente.ragione_sociale.toUpperCase() : '—', true))
   if (cliente?.indirizzo) destinatario.push(rigaDest(cliente.indirizzo))
@@ -394,7 +514,7 @@ export async function generaWordOfferta(offerta) {
               children: [
                 new Paragraph({
                   spacing: { after: 80 },
-                  children: [run(offerta.citta_data || `Roma, ${formattaDataEstesa(offerta.created_at)}`, { size: 20 })],
+                  children: [run(offerta.citta_data || `Roma, ${formattaDataEstesa(offerta.created_at)}`, { size: 24 })],
                 }),
               ],
             }),
@@ -406,7 +526,7 @@ export async function generaWordOfferta(offerta) {
   )
   children.push(paragrafo([], { after: 100 }))
 
-  children.push(paragrafo([run(`OFFERTA N° ${offerta.numero}`, { bold: true, size: 22 })], { after: 200 }))
+  children.push(paragrafo([run(`OFFERTA N° ${offerta.numero}`, { bold: true, size: 28 })], { after: 200 }))
   children.push(
     paragrafo(
       [
@@ -419,6 +539,8 @@ export async function generaWordOfferta(offerta) {
       { after: 150 }
     )
   )
+  children.push(schedaSintesi(offerta, modello, voci.length))
+  children.push(paragrafo([], { after: 120 }))
 
   // Titolo macchina centrato: "Tornio BIGLIA" / "Mod. B 620 ..." (prime due righe della descrizione base).
   const righeBase = modello.descrizione_base.split('\n').filter(Boolean)
@@ -435,11 +557,11 @@ export async function generaWordOfferta(offerta) {
     ]
     righeRiquadro.forEach((r, i) =>
       children.push(
-        riquadro(r.testo, { primo: i === 0, ultimo: i === righeRiquadro.length - 1, bold: r.bold, size: 20 })
+        riquadro(r.testo, { primo: i === 0, ultimo: i === righeRiquadro.length - 1, bold: r.bold, size: r.bold ? 28 : 22 })
       )
     )
   } else {
-    children.push(riquadro(modello.nome_commerciale, { size: 20 }))
+    children.push(riquadro(modello.nome_commerciale, { size: 28 }))
   }
 
   if (fotoModelloRun) {
@@ -447,17 +569,23 @@ export async function generaWordOfferta(offerta) {
   }
 
   if (righeBase.length > 0) {
-    children.push(titoloSezione('DESCRIZIONE MACCHINA'))
+    // La prima pagina è la presentazione (sintesi, titolo, foto): la descrizione parte dalla seconda.
+    children.push(titoloSezione('DESCRIZIONE MACCHINA', { nuovaPagina: true }))
     // Nei Master le righe dopo "... completa di:" sono elenchi puntati fino alla prossima
     // voce con titolo maiuscolo: il DB conserva il testo ma non i pallini.
+    // Ogni voce (titolo + descrizione + eventuale elenco) resta unita: se la descrizione
+    // non entra nella pagina, l'intera voce slitta alla pagina successiva (keepNext/keepLines).
     let inElenco = false
-    for (const riga of righeBase) {
+    for (const [idx, riga] of righeBase.entries()) {
       const { titolo, resto } = separaTitoloVoce(riga)
       if (titolo) inElenco = false
+      const prosegue = idx < righeBase.length - 1 && !separaTitoloVoce(righeBase[idx + 1]).titolo
       if (inElenco) {
-        children.push(puntoElenco([run(riga)]))
+        children.push(puntoElenco([run(riga)], { keepNext: prosegue }))
       } else {
-        children.push(paragrafo([...(titolo ? [run(`${titolo} `, { bold: true })] : []), run(resto)]))
+        children.push(
+          paragrafo([...(titolo ? [run(`${titolo} `, { bold: true })] : []), run(resto)], { after: 100 }, { keepNext: prosegue, keepLines: true })
+        )
       }
       if (/:\s*$/.test(riga.trim())) inElenco = true
     }
@@ -465,28 +593,19 @@ export async function generaWordOfferta(offerta) {
 
   if (modello.specifiche_tecniche?.length > 0) {
     children.push(titoloSezione('CARATTERISTICHE TECNICHE'))
-    let primo = true
-    for (const gruppo of raggruppaSpecifiche(modello.specifiche_tecniche)) {
-      if (gruppo.gruppo) {
-        children.push(sottotitolo(`${gruppo.gruppo}:`, primo ? 0 : 100))
+    const unita = unitaSpecifiche(modello.specifiche_tecniche)
+    const corta = (u) => u.righe.length > 0 && u.righe.length <= 8
+    for (let k = 0; k < unita.length; k++) {
+      const u = unita[k]
+      const prossima = unita[k + 1]
+      // Si affiancano solo sottogruppi dello stesso gruppo (es. asse Z e asse X della slitta a croce).
+      if (corta(u) && prossima && corta(prossima) && u.padre && u.padre === prossima.padre) {
+        children.push(coppiaAffiancata(u, prossima))
+        k++
+      } else {
+        if (u.titolo) children.push(sottotitolo(u.titolo, k === 0 ? 0 : 100))
+        if (u.righe.length > 0) children.push(tabellaSpecifiche(u.righe))
       }
-      // Le righe senza valore sono intestazioni interne al gruppo: si chiude la
-      // tabella corrente, si scrive l'intestazione e se ne apre una nuova.
-      let corrente = []
-      const chiudi = () => {
-        if (corrente.length > 0) children.push(tabellaSpecifiche(corrente))
-        corrente = []
-      }
-      for (const s of gruppo.righe) {
-        if (s.valore === null) {
-          chiudi()
-          children.push(sottotitolo(s.etichetta, 100))
-        } else {
-          corrente.push(s)
-        }
-      }
-      chiudi()
-      primo = false
     }
   }
 
@@ -515,13 +634,13 @@ export async function generaWordOfferta(offerta) {
       if (supplemento) {
         children.push(riquadro(`${prefissoQuantita(v)}${titoloVersione(v.descrizione_snapshot) || nome}`))
         // Con titolo ricavato da "ASA n"/"foro n" il resto breve ("foro 102,5") è già nel riquadro.
-        if (intro && intro.length > 30) children.push(paragrafo([run(intro)], { after: 60 }))
-        if (righe.length > 0) children.push(tabellaSpecifiche(righe))
+        if (intro && intro.length > 30) children.push(paragrafo([run(intro)], { after: 60 }, { keepNext: true, keepLines: true }))
+        if (righe.length > 0) children.push(tabellaSpecifiche(righe, { unita: true }))
         children.push(rigaPrezzo('SUPPLEMENTO', importoRiga(v)))
       } else {
         children.push(rigaPrezzo(`${prefissoQuantita(v)}${nome}`, importoRiga(v), { keepNext: true }))
-        if (intro) children.push(paragrafo([run(intro)], { after: 60 }))
-        if (righe.length > 0) children.push(tabellaSpecifiche(righe))
+        if (intro) children.push(paragrafo([run(intro)], { after: 60 }, { keepNext: righe.length > 0 }))
+        if (righe.length > 0) children.push(tabellaSpecifiche(righe, { unita: false }))
         else if (!intro && resto) children.push(paragrafo([run(resto)], { after: 100 }))
       }
     }
@@ -557,6 +676,7 @@ export async function generaWordOfferta(offerta) {
         ]
         // I kit di riduzione (T012-...) sono voci secondarie: nei Master sono elenchi puntati.
         const secondaria = /^T012-/.test(v.codice_snapshot || '')
+        const fotoAccessorio = trovaFotoAccessorio(modello.codice, v.codice_snapshot)
         children.push(
           new Paragraph({
             tabStops: [
@@ -565,6 +685,8 @@ export async function generaWordOfferta(offerta) {
             ],
             indent: secondaria ? { left: 360, hanging: 220, right: 1400 } : { right: 1400 },
             spacing: { before: 20, after: 20 },
+            keepNext: Boolean(fotoAccessorio),
+            keepLines: true,
             children: [
               ...(secondaria ? [run('•'), new TextRun({ children: [new Tab()], font: FONT, size: DIM_CORPO })] : []),
               ...runsEtichetta,
@@ -573,7 +695,6 @@ export async function generaWordOfferta(offerta) {
             ],
           })
         )
-        const fotoAccessorio = trovaFotoAccessorio(modello.codice, v.codice_snapshot)
         if (fotoAccessorio) {
           const fotoRun = await caricaImmagine(fotoAccessorio, 70)
           children.push(paragrafo([fotoRun], { after: 60 }, { indent: { left: secondaria ? 360 : 0 } }))
@@ -595,11 +716,13 @@ export async function generaWordOfferta(offerta) {
     {
       descrizione: `${modello.nome_commerciale}, versione base`,
       quantita: 1,
+      unitario: Number(offerta.prezzo_base_snapshot),
       importo: Number(offerta.prezzo_base_snapshot),
     },
     ...voci.map((v) => ({
       descrizione: descrizioneBreve(v),
       quantita: v.quantita || 1,
+      unitario: Number(v.prezzo_snapshot),
       importo: Number(v.prezzo_snapshot) * (v.quantita || 1),
     })),
   ]
@@ -624,14 +747,14 @@ export async function generaWordOfferta(offerta) {
       [
         run(
           'Restando a disposizione per eventuali chiarimenti tecnici o commerciali, cogliamo l’occasione per porgere distinti saluti.',
-          { size: 19 }
+          { size: 22 }
         ),
       ],
       { before: 300, after: 200 }
     )
   )
   children.push(
-    paragrafo([run('F. SCASSELLATI SRL', { bold: true, size: 19 })], { after: 80 }, { alignment: AlignmentType.RIGHT })
+    paragrafo([run('F. SCASSELLATI SRL', { bold: true, size: 22 })], { after: 80 }, { alignment: AlignmentType.RIGHT })
   )
 
   const documento = new Document({

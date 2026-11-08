@@ -16,7 +16,9 @@ export default function ClienteAutocomplete({ clienti, value, onChange, classNam
   const testoNormalizzato = normalizza(value.trim())
 
   const suggerimenti = useMemo(() => {
-    if (!testoNormalizzato) return []
+    // Campo vuoto: si mostra l'elenco dei clienti (a scorrimento) invece di niente,
+    // così il menu si apre anche solo cliccando nel campo.
+    if (!testoNormalizzato) return clienti.slice(0, 100)
     return clienti.filter((c) => normalizza(c.ragione_sociale).includes(testoNormalizzato)).slice(0, 8)
   }, [clienti, testoNormalizzato])
 
@@ -42,6 +44,7 @@ export default function ClienteAutocomplete({ clienti, value, onChange, classNam
         value={value}
         onChange={handleChange}
         onFocus={() => setOpen(true)}
+        onClick={() => setOpen(true)}
         placeholder={placeholder}
         className={className}
         autoComplete="off"
