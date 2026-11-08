@@ -57,6 +57,9 @@ const modelloDaTesto = (s) => codiciPerLunghezza.find((c) => normalizza(s).inclu
 const metadati = JSON.parse(readFileSync('src/data/offerteStoriche.json', 'utf-8'))
 const testi = JSON.parse(readFileSync('src/data/offerteStoricheTesti.json', 'utf-8'))
 const idEsistenti = new Set(metadati.map((o) => o.id))
+// File "Biglia" già controllati e scartati (non sono tornii del catalogo: robot, automazione...): non si riconvertono ogni giorno.
+const FILE_IGNORATI = 'scripts/storico-ignorati.json'
+const ignorati = new Set(existsSync(FILE_IGNORATI) ? JSON.parse(readFileSync(FILE_IGNORATI, 'utf-8')) : [])
 const chiaveOfferta = (o) => `${normalizza(o.cliente)}|${o.modello}|${o.numero || normalizza(o.file_origine)}`
 const chiaviEsistenti = new Set(metadati.map(chiaveOfferta))
 
@@ -117,7 +120,7 @@ for (const anno of ANNI) {
     // Nome file senza modello (es. "titanus-biglia (n.306-...)"): si cerca "biglia" e il modello si legge dal testo.
     if (!modello && !/biglia/i.test(senzaEst)) continue
     const id = normalizza(senzaEst)
-    if (idEsistenti.has(id)) continue
+    if (idEsistenti.has(id) || ignorati.has(id)) continue
     candidati.push({ percorso: p, nome: senzaEst, est, id, modello, anno })
   }
 }
@@ -206,7 +209,8 @@ for (const c of nuovi) {
     const riga = righe.find((r) => /^Mod.s*S/i.test(r))
     c.modello = riga ? modelloDaTesto(riga) : null
     if (!c.modello) {
-      console.warn(`  modello non riconosciuto, saltata: ${c.nome}`)
+      console.warn(`  modello non riconosciuto, saltata (non verrà più riprovata): ${c.nome}`)
+      ignorati.add(c.id)
       continue
     }
   }
@@ -227,6 +231,7 @@ for (const c of nuovi) {
   const chiave = chiaveOfferta(o)
   if (chiaviEsistenti.has(chiave)) {
     console.log(`  già presente come offerta ${chiave}: ${c.nome}`)
+    ignorati.add(c.id) // altro file della stessa offerta: non si riconverte
     continue
   }
   // più file della stessa offerta (revisioni, copie): si tiene la migliore (conferma d'ordine, revisione più alta, totale maggiore)
@@ -234,7 +239,10 @@ for (const c of nuovi) {
   if (precedente >= 0) {
     const a = aggiunte[precedente]
     const meglio = (o._confOrd ? 1 : 0) - (a._confOrd ? 1 : 0) || o._rev - a._rev || (o.totale || 0) - (a.totale || 0)
-    if (meglio > 0) aggiunte[precedente] = o
+    if (meglio > 0) {
+      ignorati.add(a.id)
+      aggiunte[precedente] = o
+    } else ignorati.add(o.id)
     console.log(`  (stessa offerta di un altro file, tenuta la migliore) ${c.nome}`)
     continue
   }
@@ -242,6 +250,7 @@ for (const c of nuovi) {
   console.log(`  + ${o.data} ${o.cliente} ${o.modello} n.${o.numero ?? '—'} ${o.totale ? o.totale.toLocaleString('it-IT') + ' €' : 'n/d'}`)
 }
 
+writeFileSync(FILE_IGNORATI, JSON.stringify([...ignorati].sort(), null, 2), 'utf-8')
 for (const { _rev, _confOrd, _testo, ...meta } of aggiunte) {
   metadati.push(meta)
   testi[meta.id] = _testo

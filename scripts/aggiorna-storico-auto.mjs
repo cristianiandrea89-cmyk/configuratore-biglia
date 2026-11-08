@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process'
 import { appendFileSync } from 'node:fs'
 
 const SENZA_PUSH = process.argv.includes('--senza-push')
-const FILE_DATI = ['src/data/offerteStoriche.json', 'src/data/offerteStoricheTesti.json', 'src/data/suggerimentiStorici.json']
+const FILE_DATI = ['scripts/storico-ignorati.json', 'src/data/offerteStoriche.json', 'src/data/offerteStoricheTesti.json', 'src/data/suggerimentiStorici.json']
 const LOG = 'scripts/aggiorna-storico.log'
 
 const git = (...a) => execFileSync('git', a, { encoding: 'utf8' }).trim()

@@ -134,3 +134,11 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   altrimenti il reload/link diretto su una route diversa da `/` darebbe 404. Variabili
   d'ambiente (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) da impostare nelle Settings del
   progetto Vercel, non nel repo.
+- **Listino Biglia ed. 09/2026** (applicato il 08/11/2026, `data_listino` 2026-09-01; le versioni 01/2026 sono
+  disattivate, non cancellate): prezzi base dei 26 modelli dal file
+  `01_Listino Fornitori/BIGLIA/09-2026 LISTINO ITALIA _CORRENTE.xls` (+3% B620/BMX, +4-4,6% B750/B1250 per la riga
+  ottica asse X ora di serie). Per B750/B1250 la composizione base ha la riga "RIGA OTTICA sull'asse X", l'optional
+  "riga ottica asse X" è stato tolto e c'è la pompa 40 bar a 4.000 €. I prezzi degli accessori con codice sono
+  invariati (144 codici verificati). **Non ancora importati**: i 20 codici nuovi della sezione HAINBUCH e il
+  poligonatore T134-00238, e i testi dei Master ed. 09/2026 (Biglia li invia per e-mail). Backup dello stato 01/2026
+  in OneDrive: 02_Configuratori/CONFIGURATORE BIGLIA/Backup configuratore listino 01-2026….json. Le offerte già fatte mantengono i prezzi 01/2026 (snapshot).
