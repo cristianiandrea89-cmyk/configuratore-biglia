@@ -336,8 +336,8 @@ function cellaEconomica(testo, larghezza, { destra = false, intestazione = false
   })
 }
 
-// sconto: risultato di calcolaSconto o null; modalitaSconto 'mostra' | 'netto'.
-function tabellaEconomica(righe, totale, sconto = null, modalitaSconto = 'mostra') {
+// sconto: risultato di calcolaSconto o null (se presente: totale di listino, riga sconto e netto riservato).
+function tabellaEconomica(righe, totale, sconto = null) {
   const COL = [5806, 700, 1800, 1800]
   const intestazione = new TableRow({
     tableHeader: true,
@@ -369,14 +369,6 @@ function tabellaEconomica(righe, totale, sconto = null, modalitaSconto = 'mostra
         cellaEconomica(`EUR ${formattaImporto(sconto?.netto ?? 0)}`, COL[3], { bronzo: true, destra: true, dim: DIM_CORPO }),
       ],
     })
-  // Solo netto: come nelle offerte storiche, nessun totale di listino né sconto, solo il netto riservato.
-  if (sconto && modalitaSconto === 'netto') {
-    return new Table({
-      width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
-      columnWidths: COL,
-      rows: [intestazione, ...corpo, rigaScontoNetto('PREZZO NETTO A VOI RISERVATO')],
-    })
-  }
   const rigaTotale = new TableRow({
     cantSplit: true,
     children: [
@@ -420,7 +412,7 @@ function tabellaEconomica(righe, totale, sconto = null, modalitaSconto = 'mostra
 
 // Scheda di sintesi in testa all'offerta: totale in evidenza + dati commerciali chiave,
 // così chi legge trova subito prezzo, consegna, pagamento, garanzia e validità.
-function schedaSintesi(offerta, modello, numeroVoci, sconto = null) {
+function schedaSintesi(offerta, modello, numeroVoci, sconto = null, finale = false) {
   const META = LARGHEZZA_TESTO / 2
   const bordi = bordiColore(GRIGIO_BORDO)
   const totaleAccessori = Number(offerta.totale) - Number(offerta.prezzo_base_snapshot)
@@ -462,17 +454,56 @@ function schedaSintesi(offerta, modello, numeroVoci, sconto = null) {
           barra(`EUR ${formattaImporto(sconto ? sconto.netto : offerta.totale)}`, true),
         ],
       }),
-      riga(campo('Macchina', modello.nome_commerciale, true), campo('Consegna', offerta.consegna)),
-      riga(campo('Prezzo macchina base', `EUR ${formattaImporto(offerta.prezzo_base_snapshot)}`, true), campo('Resa', offerta.resa)),
-      riga(
-        campo(
-          numeroVoci > 0 ? `Accessori e optional (${numeroVoci})` : 'Accessori e optional',
-          numeroVoci > 0 ? `EUR ${formattaImporto(totaleAccessori)}` : 'nessuno',
-          true
-        ),
-        campo('Pagamento', offerta.pagamento)
-      ),
-      riga(campo('Validità offerta', offerta.validita_offerta), campo('Garanzia', offerta.garanzia)),
+      ...(finale
+        ? [
+            // Prezzo finale: nessun prezzo di listino (base/accessori) nella scheda, solo il netto nella barra.
+            riga(campo('Macchina', modello.nome_commerciale, true), campo('Consegna', offerta.consegna)),
+            riga(
+              campo(
+                'Accessori e optional',
+                numeroVoci > 0 ? `${numeroVoci} ${numeroVoci === 1 ? 'voce selezionata' : 'voci selezionate'}` : 'nessuno',
+                true
+              ),
+              campo('Resa', offerta.resa)
+            ),
+            riga(campo('Offerta n.', offerta.numero, true), campo('Pagamento', offerta.pagamento)),
+            riga(campo('Validità offerta', offerta.validita_offerta), campo('Garanzia', offerta.garanzia)),
+          ]
+        : [
+            riga(campo('Macchina', modello.nome_commerciale, true), campo('Consegna', offerta.consegna)),
+            riga(campo('Prezzo macchina base', `EUR ${formattaImporto(offerta.prezzo_base_snapshot)}`, true), campo('Resa', offerta.resa)),
+            riga(
+              campo(
+                numeroVoci > 0 ? `Accessori e optional (${numeroVoci})` : 'Accessori e optional',
+                numeroVoci > 0 ? `EUR ${formattaImporto(totaleAccessori)}` : 'nessuno',
+                true
+              ),
+              campo('Pagamento', offerta.pagamento)
+            ),
+            riga(campo('Validità offerta', offerta.validita_offerta), campo('Garanzia', offerta.garanzia)),
+          ]),
+    ],
+  })
+}
+
+// Offerta a prezzo finale ("netto riservato"): nessun prezzo di listino, solo l'importo finale.
+function tabellaPrezzoFinale(importo, conSconto) {
+  const COL = [LARGHEZZA_TESTO - 2600, 2600]
+  return new Table({
+    width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
+    columnWidths: COL,
+    rows: [
+      new TableRow({
+        cantSplit: true,
+        children: [
+          cellaEconomica(conSconto ? 'PREZZO NETTO A VOI RISERVATO' : 'PREZZO TOTALE DELLA FORNITURA', COL[0], {
+            bronzo: true,
+            destra: true,
+            dim: DIM_CORPO,
+          }),
+          cellaEconomica(`EUR ${formattaImporto(importo)}`, COL[1], { bronzo: true, destra: true, dim: DIM_CORPO }),
+        ],
+      }),
     ],
   })
 }
@@ -541,9 +572,12 @@ function costruisciPiePagina(numeroOfferta) {
   })
 }
 
-// opzioni.scontoModalita: con uno sconto, 'mostra' (SCONTO x% + netto riservato) o 'netto' (solo netto).
-export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } = {}) {
+// opzioni.prezzi: 'listino' (prezzi di listino, e se c'è uno sconto: SCONTO x% + netto riservato) oppure
+// 'finale' (netto riservato: nessun prezzo di listino, solo il prezzo finale, per non mostrarli al cliente).
+export async function generaWordOfferta(offerta, { prezzi = 'listino' } = {}) {
   const sconto = calcolaSconto(offerta.totale, offerta.sconto_percentuale)
+  const finale = prezzi === 'finale'
+  const prezzoFinale = sconto ? sconto.netto : Number(offerta.totale)
   const { clienti: cliente, modelli: modello, voci_selezionate: voci } = offerta
   const logoRun = await caricaImmagine(logo, 200)
   const badgeRun = await caricaImmagine(isoBadge, 55)
@@ -608,7 +642,7 @@ export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } =
       { after: 150 }
     )
   )
-  children.push(schedaSintesi(offerta, modello, voci.length, sconto))
+  children.push(schedaSintesi(offerta, modello, voci.length, sconto, finale))
   children.push(paragrafo([], { after: 120 }))
 
   // Titolo macchina centrato: "Tornio BIGLIA" / "Mod. B 620 ..." (prime due righe della descrizione base).
@@ -720,9 +754,13 @@ export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } =
         // Con titolo ricavato da "ASA n"/"foro n" il resto breve ("foro 102,5") è già nel riquadro.
         if (intro && intro.length > 30) children.push(paragrafo([run(intro)], { after: 60 }, { keepNext: true, keepLines: true }))
         if (righe.length > 0) children.push(tabellaSpecifiche(righe, { unita: true }))
-        children.push(rigaPrezzo('SUPPLEMENTO', importoRiga(v)))
+        if (!finale) children.push(rigaPrezzo('SUPPLEMENTO', importoRiga(v)))
       } else {
-        children.push(rigaPrezzo(`${prefissoQuantita(v)}${nome}`, importoRiga(v), { keepNext: true }))
+        children.push(
+          finale
+            ? new Paragraph({ keepNext: true, spacing: { before: 40, after: 60 }, children: [run(`${prefissoQuantita(v)}${nome}`, { bold: true })] })
+            : rigaPrezzo(`${prefissoQuantita(v)}${nome}`, importoRiga(v), { keepNext: true })
+        )
         if (intro) children.push(paragrafo([run(intro)], { after: 60 }, { keepNext: righe.length > 0 }))
         if (righe.length > 0) children.push(tabellaSpecifiche(righe, { unita: false }))
         else if (!intro && resto) children.push(paragrafo([run(resto)], { after: 100 }))
@@ -767,15 +805,20 @@ export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } =
               { type: TabStopType.LEFT, position: 360 },
               { type: TabStopType.RIGHT, position: LARGHEZZA_TESTO },
             ],
-            indent: secondaria ? { left: 360, hanging: 220, right: 1400 } : { right: 1400 },
+            indent: secondaria ? { left: 360, hanging: 220, right: finale ? 0 : 1400 } : { right: finale ? 0 : 1400 },
             spacing: { before: 20, after: 20 },
             keepNext: Boolean(fotoAccessorio),
             keepLines: true,
             children: [
               ...(secondaria ? [run('•'), new TextRun({ children: [new Tab()], font: FONT, size: DIM_CORPO })] : []),
               ...runsEtichetta,
-              new TextRun({ children: [new Tab()], font: FONT, size: DIM_CORPO }),
-              run(`€  ${formattaImporto(importoRiga(v))}`, { bold: true }),
+              // Nel Word a prezzo finale i prezzi di listino non compaiono.
+              ...(finale
+                ? []
+                : [
+                    new TextRun({ children: [new Tab()], font: FONT, size: DIM_CORPO }),
+                    run(`€  ${formattaImporto(importoRiga(v))}`, { bold: true }),
+                  ]),
             ],
           })
         )
@@ -810,7 +853,7 @@ export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } =
       importo: Number(v.prezzo_snapshot) * (v.quantita || 1),
     })),
   ]
-  children.push(tabellaEconomica(righeEconomiche, offerta.totale, sconto, scontoModalita))
+  children.push(finale ? tabellaPrezzoFinale(prezzoFinale, Boolean(sconto)) : tabellaEconomica(righeEconomiche, offerta.totale, sconto))
   children.push(paragrafo([], { after: 80 }))
 
   children.push(titoloSezione('CONDIZIONI DI FORNITURA'))

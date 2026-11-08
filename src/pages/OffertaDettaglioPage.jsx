@@ -15,9 +15,9 @@ export default function OffertaDettaglioPage() {
   const [offerta, setOfferta] = useState(null)
   const [errore, setErrore] = useState(null)
   const [generazioneWord, setGenerazioneWord] = useState(false)
-  // Con uno sconto, chi scarica decide come presentarlo nel Word: 'mostra' = SCONTO x% + netto riservato,
-  // 'netto' = solo il prezzo netto riservato (come nelle offerte Biglia storiche).
-  const [modalitaSconto, setModalitaSconto] = useState('mostra')
+  // Come presentare i prezzi nel Word: 'listino' = prezzi di listino (e, se c'è, sconto + netto riservato);
+  // 'finale' = netto riservato: nessun prezzo di listino, solo il prezzo finale.
+  const [prezziWord, setPrezziWord] = useState('listino')
 
   useEffect(() => {
     fetchOfferta(id)
@@ -28,7 +28,7 @@ export default function OffertaDettaglioPage() {
   async function handleScaricaWord() {
     setGenerazioneWord(true)
     try {
-      const blob = await generaWordOfferta(offerta, { scontoModalita: modalitaSconto })
+      const blob = await generaWordOfferta(offerta, { prezzi: prezziWord })
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
@@ -69,19 +69,24 @@ export default function OffertaDettaglioPage() {
         )}
       </div>
 
-      {sconto && (
-        <fieldset className="mt-4 border border-gray/30 rounded-sm px-3 py-2 text-sm text-dgray">
-          <legend className="px-1 text-xs uppercase text-dgray/60">Sconto {sconto.percentuale}% — come mostrarlo nel Word</legend>
-          <label className="flex items-center gap-2 py-0.5">
-            <input type="radio" name="modalitaSconto" checked={modalitaSconto === 'mostra'} onChange={() => setModalitaSconto('mostra')} className="accent-bronze" />
-            Mostra lo sconto («SCONTO {sconto.percentuale}% - {formattaPrezzo(sconto.importoSconto)}») e il prezzo netto riservato
-          </label>
-          <label className="flex items-center gap-2 py-0.5">
-            <input type="radio" name="modalitaSconto" checked={modalitaSconto === 'netto'} onChange={() => setModalitaSconto('netto')} className="accent-bronze" />
-            Solo prezzo netto riservato (lo sconto non compare)
-          </label>
-        </fieldset>
-      )}
+      <fieldset className="mt-4 border border-gray/30 rounded-sm px-3 py-2 text-sm text-dgray">
+        <legend className="px-1 text-xs uppercase text-dgray/60">Prezzi nel Word</legend>
+        <label className="flex items-start gap-2 py-0.5">
+          <input type="radio" name="prezziWord" checked={prezziWord === 'listino'} onChange={() => setPrezziWord('listino')} className="mt-0.5 accent-bronze" />
+          <span>
+            {sconto
+              ? `Prezzi di listino, sconto (${sconto.percentuale}% − ${formattaPrezzo(sconto.importoSconto)}) e netto riservato`
+              : 'Prezzi di listino e totale della fornitura'}
+          </span>
+        </label>
+        <label className="flex items-start gap-2 py-0.5">
+          <input type="radio" name="prezziWord" checked={prezziWord === 'finale'} onChange={() => setPrezziWord('finale')} className="mt-0.5 accent-bronze" />
+          <span>
+            Solo prezzo finale (netto riservato): nasconde tutti i prezzi di listino, resta solo{' '}
+            <span className="font-semibold">{formattaPrezzo(sconto ? sconto.netto : offerta.totale)}</span>
+          </span>
+        </label>
+      </fieldset>
 
       <section className="mt-6">
         <h2 className="font-heading text-lg font-bold uppercase text-dgray mb-2">Riepilogo</h2>
