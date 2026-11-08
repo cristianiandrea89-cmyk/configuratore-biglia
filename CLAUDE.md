@@ -34,8 +34,9 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
 
 - **Stack**: React 19 + Vite 8 + Tailwind v4 (plugin `@tailwindcss/vite`, nessun
   `tailwind.config.js` — token colore/font in `src/index.css` via `@theme`: `--color-bronze`,
-  `--color-dgray`, ecc.). Routing con `react-router-dom`, composto in `src/App.jsx`. Nessun
-  login/account utente: `useCurrentUser` (`src/hooks/useCurrentUser.jsx`) tiene solo il nome del
+  `--color-dgray`, ecc.). Routing con `react-router-dom`, composto in `src/App.jsx`. Accesso: `src/components/LoginGate.jsx` blocca l'intera app dietro la
+  password condivisa (la stessa del Radar) letta dalla variabile `VITE_ACCESS_PASSWORD` (.env in locale, Environment Variables su Vercel: non sta nel repo, ma finisce nel bundle; se manca l'accesso resta bloccato), sblocco una volta per dispositivo in localStorage: non è
+  vera autenticazione e il DB resta ad accesso aperto. Nessun account utente: `useCurrentUser` (`src/hooks/useCurrentUser.jsx`) tiene solo il nome del
   venditore per-dispositivo in localStorage, per popolare "creato da"/"inserito da" — non è
   autenticazione.
 - **Nessun backend proprio**: ogni pagina in `src/pages` chiama direttamente le funzioni in

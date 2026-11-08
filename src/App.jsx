@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import LoginGate from './components/LoginGate'
 import { CurrentUserProvider } from './hooks/useCurrentUser'
 import NuovaOffertaPage from './pages/NuovaOffertaPage'
 import BozzeOffertePage from './pages/BozzeOffertePage'
@@ -10,7 +11,8 @@ import AggiornaPrezziPage from './pages/AggiornaPrezziPage'
 
 function App() {
   return (
-    <CurrentUserProvider>
+    <LoginGate>
+      <CurrentUserProvider>
       <BrowserRouter>
         <NavBar />
         <main className="mx-auto max-w-5xl px-5 py-8">
@@ -25,7 +27,8 @@ function App() {
           </Routes>
         </main>
       </BrowserRouter>
-    </CurrentUserProvider>
+      </CurrentUserProvider>
+    </LoginGate>
   )
 }
 
