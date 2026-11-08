@@ -108,15 +108,25 @@ export default function OffertaDettaglioPage() {
         )}
       </section>
 
-      <div className="mt-6 font-heading text-xl font-extrabold text-dgray">
-        Totale <span className="text-bronze">{formattaPrezzo(offerta.totale)}</span>
+      {/* Totale, poi la riga dello sconto, poi la riga del netto (stesso ordine del Word). */}
+      <div className="mt-6 max-w-md">
+        <div className="flex items-baseline justify-between gap-4 font-heading text-xl font-extrabold text-dgray">
+          <span>Totale</span>
+          <span className="text-bronze">{formattaPrezzo(offerta.totale)}</span>
+        </div>
+        {sconto && (
+          <>
+            <div className="mt-1 flex items-baseline justify-between gap-4 text-sm text-dgray">
+              <span>Sconto {sconto.percentuale}%</span>
+              <span>− {formattaPrezzo(sconto.importoSconto)}</span>
+            </div>
+            <div className="mt-1 flex items-baseline justify-between gap-4 border-t border-gray/40 pt-1 font-heading text-xl font-extrabold text-dgray">
+              <span>Netto riservato</span>
+              <span className="text-bronze">{formattaPrezzo(sconto.netto)}</span>
+            </div>
+          </>
+        )}
       </div>
-      {sconto && (
-        <p className="mt-1 text-sm text-dgray">
-          Sconto {sconto.percentuale}% (− {formattaPrezzo(sconto.importoSconto)}) · Netto riservato{' '}
-          <span className="font-semibold text-bronze">{formattaPrezzo(sconto.netto)}</span>
-        </p>
-      )}
 
       <Link to="/" className="mt-6 inline-block text-sm text-bronze hover:underline">
         ← Nuova offerta
