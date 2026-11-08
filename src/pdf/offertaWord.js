@@ -226,8 +226,6 @@ function tabellaSpecifiche(righe, { unita = false, larghezza = LARGHEZZA_TESTO, 
   const colValore = larghezza - colEtichetta
   // evidenza: dotazioni incluse nel prezzo, con bordo bronzo e fondo caldo.
   const bordi = bordiColore(evidenza ? BRONZO : GRIGIO_BORDO)
-  // In evidenza anche un filetto più spesso a sinistra, come un "segno di spunta" sull'elenco.
-  const bordiEvidenzaEtichetta = { ...bordi, left: { style: BorderStyle.SINGLE, size: 24, color: BRONZO } }
   return new Table({
     width: { size: larghezza, type: WidthType.DXA },
     columnWidths: [colEtichetta, colValore],
@@ -242,7 +240,7 @@ function tabellaSpecifiche(righe, { unita = false, larghezza = LARGHEZZA_TESTO, 
         children: [
           new TableCell({
             width: { size: colEtichetta, type: WidthType.DXA },
-            borders: evidenza ? bordiEvidenzaEtichetta : bordi,
+            borders: bordi,
             shading: sfondo,
             children: [paragrafo([run(s.etichetta ?? '', { size: DIM_TABELLA })], { after: 0 }, { keepNext: unita })],
           }),

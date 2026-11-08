@@ -153,3 +153,12 @@ export async function fetchStoricoOfferte() {
   if (error) throw error
   return data
 }
+
+// Cambia il numero dell'offerta (es. "438/26", preso dal progressivo ufficiale). Il numero è unico.
+export async function aggiornaNumeroOfferta(id, numero) {
+  const { error } = await supabase.from('offerte').update({ numero }).eq('id', id)
+  if (error) {
+    if (error.code === '23505') throw new Error(`Il numero ${numero} è già assegnato a un'altra offerta nell'app.`)
+    throw error
+  }
+}

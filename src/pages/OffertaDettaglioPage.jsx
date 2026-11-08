@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { fetchOfferta } from '../lib/offerte'
+import { fetchOfferta, aggiornaNumeroOfferta } from '../lib/offerte'
+import { leggiNumeroUfficiale } from '../lib/progressivo'
 import { generaWordOfferta } from '../pdf/offertaWord'
 import Button from '../components/Button'
 import { separaTitoloVoce } from '../lib/testoVoce'
@@ -18,12 +19,36 @@ export default function OffertaDettaglioPage() {
   // Come presentare i prezzi nel Word: 'listino' = prezzi di listino (e, se c'è, sconto + netto riservato);
   // 'finale' = netto riservato: nessun prezzo di listino, solo il prezzo finale.
   const [prezziWord, setPrezziWord] = useState('listino')
+  // Numero ufficiale dell'offerta: si scrive a mano guardando il progressivo su OneDrive.
+  const [numeroInModifica, setNumeroInModifica] = useState(false)
+  const [nuovoNumero, setNuovoNumero] = useState('')
+  const [erroreNumero, setErroreNumero] = useState(null)
+  const [salvataggioNumero, setSalvataggioNumero] = useState(false)
 
   useEffect(() => {
     fetchOfferta(id)
       .then(setOfferta)
       .catch((e) => setErrore(e.message))
   }, [id])
+
+  async function handleSalvaNumero() {
+    const letto = leggiNumeroUfficiale(nuovoNumero)
+    if (!letto) {
+      setErroreNumero('Scrivi il numero nel formato 438/26.')
+      return
+    }
+    setSalvataggioNumero(true)
+    setErroreNumero(null)
+    try {
+      await aggiornaNumeroOfferta(offerta.id, letto.numero)
+      setOfferta({ ...offerta, numero: letto.numero })
+      setNumeroInModifica(false)
+    } catch (e) {
+      setErroreNumero(e.message)
+    } finally {
+      setSalvataggioNumero(false)
+    }
+  }
 
   async function handleScaricaWord() {
     setGenerazioneWord(true)
@@ -49,7 +74,46 @@ export default function OffertaDettaglioPage() {
 
   return (
     <div>
-      <p className="text-sm text-dgray/60">Offerta n. {offerta.numero}</p>
+      <div className="text-sm text-dgray/60">
+        Offerta n. {offerta.numero}{' '}
+        {!numeroInModifica && (
+          <button
+            type="button"
+            onClick={() => {
+              setNuovoNumero('')
+              setErroreNumero(null)
+              setNumeroInModifica(true)
+            }}
+            className="ml-1 text-bronze hover:underline"
+          >
+            Cambia numero
+          </button>
+        )}
+      </div>
+      {numeroInModifica && (
+        <div className="mt-1 mb-2 rounded-sm border border-gray/30 px-3 py-2 text-sm text-dgray">
+          <label className="flex flex-wrap items-center gap-2">
+            <span>Numero ufficiale</span>
+            <input
+              type="text"
+              value={nuovoNumero}
+              onChange={(e) => setNuovoNumero(e.target.value)}
+              placeholder="es. 438/26"
+              className="w-28 rounded-sm border border-gray/40 px-2 py-1 text-sm focus:border-bronze focus:outline-none"
+            />
+            <Button variant="primary" onClick={handleSalvaNumero} disabled={salvataggioNumero}>
+              {salvataggioNumero ? 'Salvataggio…' : 'Salva numero'}
+            </Button>
+            <Button variant="secondary" onClick={() => setNumeroInModifica(false)} disabled={salvataggioNumero}>
+              Annulla
+            </Button>
+          </label>
+          <p className="mt-1 text-xs text-dgray/70">
+            Guarda il progressivo su OneDrive (Offerte 2026 › 00_Progressivo Offerte) e scrivi il numero a mano, formato 438/26.
+          </p>
+          {erroreNumero && <p className="mt-1 text-xs text-red-600">{erroreNumero}</p>}
+        </div>
+      )}
       <h1 className="font-heading text-2xl font-extrabold uppercase text-dgray">
         {offerta.titolo || offerta.modelli.nome_commerciale}
       </h1>
