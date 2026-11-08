@@ -23,7 +23,9 @@ const VERSIONE_MANDRINO_RE = /MANDRINO/i
 // Riconosce le sezioni 'ATTREZZI di PRESA MANDRINO ASA X” ...' per estrarne la
 // misura (5/6/8), usata per mostrare solo quella del mandrino attivo e
 // collassare le altre.
-const ASA_NEL_GRUPPO_RE = /ATTREZZI\s+di\s+PRESA\s+MANDRINO.*ASA\s*(\d+)/i
+// Tutti i gruppi di attrezzi di presa (mandrino principale e controtesta): quantità selezionabile.
+const ATTREZZI_DI_PRESA_RE = /^ATTREZZI\s+di\s+PRESA/i
+const ASA_NEL_GRUPPO_RE =/ATTREZZI\s+di\s+PRESA\s+MANDRINO.*ASA\s*(\d+)/i
 // Sui modelli BMX51/70/80 la stessa frase è 'MANDRINO PRINCIPALE CON
 // ELETTROMANDRINO ASA X', non 'mandrino principale ASA X' come su B620/750/1250.
 const ASA_BASE_RE = /mandrino principale(?:\s+con\s+elettromandrino)?\s*ASA\s*(\d+)/i
@@ -782,7 +784,11 @@ export default function NuovaOffertaPage() {
                             selezionata={selezionate.has(v.id)}
                             onToggle={toggleVoce}
                             disabled={nonCorrispondente}
-                            mostraQuantita={gruppo === 'Mandrinetti motorizzati' || gruppo === 'Extra dotazione'}
+                            mostraQuantita={
+                              gruppo === 'Mandrinetti motorizzati' ||
+                              gruppo === 'Extra dotazione' ||
+                              ATTREZZI_DI_PRESA_RE.test(gruppo)
+                            }
                             quantita={getQuantita(v.id)}
                             onQuantitaChange={setQuantitaVoce}
                           />

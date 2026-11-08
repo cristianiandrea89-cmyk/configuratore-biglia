@@ -82,9 +82,22 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   lato client con la libreria `docx` (`src/pdf/offertaWord.js`, funzione `generaWordOfferta`,
   usata dal pulsante "Scarica Word" in `OffertaDettaglioPage.jsx`), pensato per essere
   ritoccabile a mano prima dell'invio (coerente col vecchio processo manuale che sostituisce).
-  Usa le stesse funzioni di prosa/raggruppamento di `src/lib/testoVoce.js` della UI del
-  configuratore, con `Table`/`TableRow`/`TableCell` senza bordi per le righe etichetta/valore
-  (caratteristiche tecniche, condizioni di fornitura). Mostra il prezzo per ogni voce
+  Impaginazione ricalcata sulle offerte Biglia recenti della cartella OFFERTE 2026 (modello
+  I.M.A.R. B620 YS, 6 pagine): A4 compatto (margini top 1500/right 900/bottom 1200/left 900 twip),
+  Calibri 9pt, logo Scassellati + bollino ISO 9001 (`src/assets/iso9001.png`) in intestazione,
+  dati societari + "Pagina X di Y   OFF.N°…" a piè di pagina, data/destinatario in tabella senza
+  bordi, titoli di sezione in grassetto, caratteristiche tecniche in tabelle a due colonne con
+  bordi grigi. Per titolo macchina, versioni alternative a supplemento (mandrino ASA) e gruppi di
+  accessori si prende invece la grafica dei Master (cartella `TESTI OFF.2026`): riquadro giallo
+  per gruppo, righe "CODICE - descrizione ..... € prezzo", kit T012 come elenco puntato, note di
+  gruppo da `noteVoci.json` in corsivo, miniatura sotto la riga. Per raggruppare servono
+  `categoria/gruppo/tipo_prezzo` di `voci_opzionali`: `fetchOfferta` li include via embed su
+  `offerte_voci`. Riepilogo prezzi in tabella "OFFERTA ECONOMICA" (intestazione blu 1F3864: riga base + una riga
+  per voce con prezzo × quantità + totale), condizioni in righe brevi, chiusura "Restando a
+  disposizione…". Le offerte più vecchie (COLLIDRILL, EUROPA TRADING) hanno uno stile diverso
+  (Times, riquadri gialli, ~11 pagine): si è scelto di seguire lo stile IMAR. Usa le stesse
+  funzioni di prosa/raggruppamento di `src/lib/testoVoce.js` della UI del configuratore.
+  Mostra il prezzo per ogni voce
   optional/accessorio selezionata (non solo il totale finale) — scelta esplicita dell'utente,
   diversa dal formato "conferma d'ordine" senza prezzi riga con cui è partito il progetto
   (vedi piano iniziale). Al posto di un'anteprima del documento, `OffertaDettaglioPage.jsx`

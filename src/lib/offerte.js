@@ -130,7 +130,9 @@ export async function fetchOfferta(id) {
 
   const { data: voci, error: errVoci } = await supabase
     .from('offerte_voci')
-    .select('*')
+    // voci_opzionali: categoria/gruppo/tipo_prezzo servono al Word per raggruppare gli
+    // accessori come nei Master (riquadro per gruppo, supplementi, note di gruppo).
+    .select('*, voci_opzionali(categoria, gruppo, tipo_prezzo)')
     .eq('offerta_id', id)
     .order('ordine')
   if (errVoci) throw errVoci
