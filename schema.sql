@@ -142,6 +142,7 @@ create table if not exists offerte (
   pagamento text,
   garanzia text,
   validita_offerta text,
+  sconto_percentuale numeric(5,2),       -- sconto % sul totale di listino (null = nessuno), vedi migration_sconto.sql
   stato text not null default 'bozza' check (stato in ('bozza', 'inviata', 'confermata', 'persa')),
   creato_da text not null,
   created_at timestamptz not null default now(),

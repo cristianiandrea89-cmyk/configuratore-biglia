@@ -4,6 +4,7 @@ import { fetchOfferta } from '../lib/offerte'
 import { generaWordOfferta } from '../pdf/offertaWord'
 import Button from '../components/Button'
 import { separaTitoloVoce } from '../lib/testoVoce'
+import { calcolaSconto } from '../lib/sconto'
 
 function formattaPrezzo(prezzo) {
   return new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(prezzo)
@@ -14,6 +15,9 @@ export default function OffertaDettaglioPage() {
   const [offerta, setOfferta] = useState(null)
   const [errore, setErrore] = useState(null)
   const [generazioneWord, setGenerazioneWord] = useState(false)
+  // Con uno sconto, chi scarica decide come presentarlo nel Word: 'mostra' = SCONTO x% + netto riservato,
+  // 'netto' = solo il prezzo netto riservato (come nelle offerte Biglia storiche).
+  const [modalitaSconto, setModalitaSconto] = useState('mostra')
 
   useEffect(() => {
     fetchOfferta(id)
@@ -24,11 +28,13 @@ export default function OffertaDettaglioPage() {
   async function handleScaricaWord() {
     setGenerazioneWord(true)
     try {
-      const blob = await generaWordOfferta(offerta)
+      const blob = await generaWordOfferta(offerta, { scontoModalita: modalitaSconto })
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `Offerta_${offerta.numero}_${offerta.clienti?.ragione_sociale || 'senza-cliente'}.docx`
+      // Il numero ufficiale è del tipo "438/26": la barra non è ammessa nei nomi file.
+      const nomeFile = `Offerta_${offerta.numero}_${offerta.clienti?.ragione_sociale || 'senza-cliente'}`.replace(/[\\/:*?"<>|]/g, '-')
+      a.download = `${nomeFile}.docx`
       a.click()
       URL.revokeObjectURL(url)
     } finally {
@@ -38,6 +44,8 @@ export default function OffertaDettaglioPage() {
 
   if (errore) return <p className="text-sm text-red-600">{errore}</p>
   if (!offerta) return <p className="text-sm text-dgray/70">Caricamento…</p>
+
+  const sconto = calcolaSconto(offerta.totale, offerta.sconto_percentuale)
 
   return (
     <div>
@@ -60,6 +68,20 @@ export default function OffertaDettaglioPage() {
           </Link>
         )}
       </div>
+
+      {sconto && (
+        <fieldset className="mt-4 border border-gray/30 rounded-sm px-3 py-2 text-sm text-dgray">
+          <legend className="px-1 text-xs uppercase text-dgray/60">Sconto {sconto.percentuale}% — come mostrarlo nel Word</legend>
+          <label className="flex items-center gap-2 py-0.5">
+            <input type="radio" name="modalitaSconto" checked={modalitaSconto === 'mostra'} onChange={() => setModalitaSconto('mostra')} className="accent-bronze" />
+            Mostra lo sconto («SCONTO {sconto.percentuale}% - {formattaPrezzo(sconto.importoSconto)}») e il prezzo netto riservato
+          </label>
+          <label className="flex items-center gap-2 py-0.5">
+            <input type="radio" name="modalitaSconto" checked={modalitaSconto === 'netto'} onChange={() => setModalitaSconto('netto')} className="accent-bronze" />
+            Solo prezzo netto riservato (lo sconto non compare)
+          </label>
+        </fieldset>
+      )}
 
       <section className="mt-6">
         <h2 className="font-heading text-lg font-bold uppercase text-dgray mb-2">Riepilogo</h2>
@@ -89,6 +111,12 @@ export default function OffertaDettaglioPage() {
       <div className="mt-6 font-heading text-xl font-extrabold text-dgray">
         Totale <span className="text-bronze">{formattaPrezzo(offerta.totale)}</span>
       </div>
+      {sconto && (
+        <p className="mt-1 text-sm text-dgray">
+          Sconto {sconto.percentuale}% (− {formattaPrezzo(sconto.importoSconto)}) · Netto riservato{' '}
+          <span className="font-semibold text-bronze">{formattaPrezzo(sconto.netto)}</span>
+        </p>
+      )}
 
       <Link to="/" className="mt-6 inline-block text-sm text-bronze hover:underline">
         ← Nuova offerta

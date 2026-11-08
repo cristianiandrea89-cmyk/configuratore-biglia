@@ -10,6 +10,7 @@ import ClienteAutocomplete from '../components/ClienteAutocomplete'
 import VoceOpzionaleRow from '../components/VoceOpzionaleRow'
 import TotaleBar from '../components/TotaleBar'
 import NomeUtenteInline from '../components/NomeUtenteInline'
+import { calcolaSconto, leggiPercentuale } from '../lib/sconto'
 import Button from '../components/Button'
 import { separaTitoloVoce, separaCaratteristicheTecniche, raggruppaSpecifiche, MACRO_SEZIONE_RE } from '../lib/testoVoce'
 import noteVoci from '../data/noteVoci.json'
@@ -115,6 +116,7 @@ export default function NuovaOffertaPage() {
 
   const [clienti, setClienti] = useState([])
   const [nomeCliente, setNomeCliente] = useState('')
+  const [sconto, setSconto] = useState('') // % di sconto, testo libero (facoltativo)
   const [modelli, setModelli] = useState([])
   const [modelloId, setModelloId] = useState('')
   const [modello, setModello] = useState(null)
@@ -158,6 +160,7 @@ export default function NuovaOffertaPage() {
       .then((o) => {
         setBozza(o)
         setNomeCliente(o.clienti?.ragione_sociale || '')
+        setSconto(o.sconto_percentuale ? String(o.sconto_percentuale).replace('.', ',') : '')
         setModelloId(o.modello_id)
       })
       .catch((e) => setErrore(e.message))
@@ -390,6 +393,8 @@ export default function NuovaOffertaPage() {
     return Number(modello.prezzo_base) + sommaVoci
   }, [modello, vociSelezionate, quantita])
 
+  const scontoCalcolato = useMemo(() => calcolaSconto(totale, leggiPercentuale(sconto)), [totale, sconto])
+
   async function handleGenera() {
     if (salvataggio) return
     if (!utente) {
@@ -408,6 +413,8 @@ export default function NuovaOffertaPage() {
         vociSelezionate: vociSelezionate.map((v) => ({ ...v, quantita: getQuantita(v.id) })),
         titolo: `Offerta tornio ${modello.nome_commerciale}`,
         condizioni,
+        // undefined = non inviare la colonna (funziona anche prima della migrazione); null = rimuovi.
+        scontoPercentuale: leggiPercentuale(sconto) ?? (bozza?.sconto_percentuale ? null : undefined),
       }
       if (modificaId) {
         await aggiornaOfferta(modificaId, payload)
@@ -432,12 +439,14 @@ export default function NuovaOffertaPage() {
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="block text-sm font-medium text-dgray mb-1">Cliente</label>
+          <label className="block text-sm font-medium text-dgray mb-1">
+            Cliente <span className="font-normal text-dgray/60">(facoltativo)</span>
+          </label>
           <ClienteAutocomplete
             clienti={clienti}
             value={nomeCliente}
             onChange={setNomeCliente}
-            placeholder="Ragione sociale"
+            placeholder="Ragione sociale — lascia vuoto per aggiungerlo dopo"
             className="w-full border border-gray/40 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-bronze"
           />
         </div>
@@ -829,6 +838,26 @@ export default function NuovaOffertaPage() {
 
       {modello && (
         <TotaleBar totale={totale}>
+          <label className="flex items-center gap-2 text-sm text-dgray">
+            <span>Sconto</span>
+            <input
+              type="text"
+              inputMode="decimal"
+              value={sconto}
+              onChange={(e) => setSconto(e.target.value)}
+              placeholder="0"
+              className="w-16 border border-gray/40 rounded-sm px-2 py-1 text-right text-sm focus:outline-none focus:border-bronze"
+            />
+            <span>%</span>
+          </label>
+          {scontoCalcolato && (
+            <span className="text-sm text-dgray">
+              Netto riservato{' '}
+              <span className="font-semibold text-bronze">
+                {new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(scontoCalcolato.netto)}
+              </span>
+            </span>
+          )}
           <Button variant="primary" onClick={handleGenera} disabled={salvataggio}>
             {salvataggio ? 'Salvataggio…' : modificaId ? 'Salva modifiche' : 'Genera offerta'}
           </Button>

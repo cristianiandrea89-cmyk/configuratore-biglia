@@ -25,6 +25,7 @@ import fotoB1250 from '../assets/modelli/b1250.png'
 import fotoBMX from '../assets/modelli/bmx.png'
 import { separaTitoloVoce, separaCaratteristicheTecniche, raggruppaSpecifiche, MACRO_SEZIONE_RE } from '../lib/testoVoce'
 import noteVoci from '../data/noteVoci.json'
+import { calcolaSconto } from '../lib/sconto'
 
 // Impaginazione ricalcata sulle offerte Biglia più recenti della cartella OFFERTE
 // 2026 (es. I.M.A.R. B620 YS): A4 compatto con margini ridotti, Calibri 9pt,
@@ -75,6 +76,7 @@ const BRONZO = 'CE9041'
 const GRIGIO_SCURO = '2D2926'
 const GRIGIO = 'CFCECF'
 const BIANCO_SPORCO = 'F6F6F6'
+const BRONZO_CHIARO = 'F3E2C7' // tinta leggera del bronzo, per le dotazioni incluse
 const BLU = GRIGIO_SCURO // intestazioni tabella prezzi
 const GRIGIO_BORDO = GRIGIO
 
@@ -212,20 +214,35 @@ async function caricaImmagine(src, larghezza) {
 // Tabella a due colonne etichetta/valore con bordi grigi (caratteristiche tecniche).
 // unita: tiene tutte le righe sulla stessa pagina (e agganciate al paragrafo seguente).
 // Righe alternate in bianco sporco e valori in grassetto per scorrere meglio le colonne.
-function tabellaSpecifiche(righe, { unita = false, larghezza = LARGHEZZA_TESTO, colEtichetta = 6800 } = {}) {
+function tabellaSpecifiche(righe, { unita = false, larghezza = LARGHEZZA_TESTO, colEtichetta = null, evidenza = false } = {}) {
+  // Se non è fissata, la colonna dei valori si allarga quanto serve perché il valore più lungo
+  // (es. "SET di nr. 2 chiavi per ER-25QF (ed ER32)") stia su una riga sola: ~112 twip per
+  // carattere a 10pt grassetto, tra 3306 e 6200.
+  if (colEtichetta === null) {
+    const piuLungo = Math.max(0, ...righe.map((r) => String(r.valore ?? '').length))
+    const colValoreStimata = Math.min(6200, Math.max(larghezza - 6800, piuLungo * 112 + 240))
+    colEtichetta = larghezza - colValoreStimata
+  }
   const colValore = larghezza - colEtichetta
-  const bordi = bordiColore(GRIGIO_BORDO)
+  // evidenza: dotazioni incluse nel prezzo, con bordo bronzo e fondo caldo.
+  const bordi = bordiColore(evidenza ? BRONZO : GRIGIO_BORDO)
+  // In evidenza anche un filetto più spesso a sinistra, come un "segno di spunta" sull'elenco.
+  const bordiEvidenzaEtichetta = { ...bordi, left: { style: BorderStyle.SINGLE, size: 24, color: BRONZO } }
   return new Table({
     width: { size: larghezza, type: WidthType.DXA },
     columnWidths: [colEtichetta, colValore],
     rows: righe.map((s, i) => {
-      const sfondo = i % 2 === 1 ? { type: ShadingType.CLEAR, fill: BIANCO_SPORCO, color: 'auto' } : undefined
+      const sfondo = evidenza
+        ? { type: ShadingType.CLEAR, fill: i % 2 === 1 ? BRONZO_CHIARO : 'FFFFFF', color: 'auto' }
+        : i % 2 === 1
+          ? { type: ShadingType.CLEAR, fill: BIANCO_SPORCO, color: 'auto' }
+          : undefined
       return new TableRow({
         cantSplit: true,
         children: [
           new TableCell({
             width: { size: colEtichetta, type: WidthType.DXA },
-            borders: bordi,
+            borders: evidenza ? bordiEvidenzaEtichetta : bordi,
             shading: sfondo,
             children: [paragrafo([run(s.etichetta ?? '', { size: DIM_TABELLA })], { after: 0 }, { keepNext: unita })],
           }),
@@ -298,16 +315,20 @@ function coppiaAffiancata(a, b) {
 }
 
 // Riga della tabella "OFFERTA ECONOMICA".
-function cellaEconomica(testo, larghezza, { destra = false, intestazione = false, span = 1, grassetto = false, dim = DIM_TABELLA } = {}) {
-  const colore = intestazione ? BLU : GRIGIO_BORDO
+function cellaEconomica(testo, larghezza, { destra = false, intestazione = false, span = 1, grassetto = false, dim = DIM_TABELLA, bronzo = false } = {}) {
+  const colore = intestazione ? BLU : bronzo ? BRONZO : GRIGIO_BORDO
   return new TableCell({
     width: { size: larghezza, type: WidthType.DXA },
     columnSpan: span,
     borders: bordiColore(colore),
-    shading: intestazione ? { type: ShadingType.CLEAR, fill: BLU, color: 'auto' } : undefined,
+    shading: intestazione
+      ? { type: ShadingType.CLEAR, fill: BLU, color: 'auto' }
+      : bronzo
+        ? { type: ShadingType.CLEAR, fill: BRONZO, color: 'auto' }
+        : undefined,
     children: [
       paragrafo(
-        [run(testo, { size: dim, bold: intestazione || grassetto, color: intestazione ? 'FFFFFF' : undefined })],
+        [run(testo, { size: dim, bold: intestazione || bronzo || grassetto, color: intestazione ? 'FFFFFF' : undefined })],
         { after: 0 },
         { alignment: destra ? AlignmentType.RIGHT : AlignmentType.LEFT }
       ),
@@ -315,7 +336,8 @@ function cellaEconomica(testo, larghezza, { destra = false, intestazione = false
   })
 }
 
-function tabellaEconomica(righe, totale) {
+// sconto: risultato di calcolaSconto o null; modalitaSconto 'mostra' | 'netto'.
+function tabellaEconomica(righe, totale, sconto = null, modalitaSconto = 'mostra') {
   const COL = [5806, 700, 1800, 1800]
   const intestazione = new TableRow({
     tableHeader: true,
@@ -339,10 +361,28 @@ function tabellaEconomica(righe, totale) {
         ],
       })
   )
+  const rigaScontoNetto = (testoNetto) =>
+    new TableRow({
+      cantSplit: true,
+      children: [
+        cellaEconomica(testoNetto, COL[0] + COL[1] + COL[2], { bronzo: true, destra: true, span: 3, dim: DIM_CORPO }),
+        cellaEconomica(`EUR ${formattaImporto(sconto?.netto ?? 0)}`, COL[3], { bronzo: true, destra: true, dim: DIM_CORPO }),
+      ],
+    })
+  // Solo netto: come nelle offerte storiche, nessun totale di listino né sconto, solo il netto riservato.
+  if (sconto && modalitaSconto === 'netto') {
+    return new Table({
+      width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
+      columnWidths: COL,
+      rows: [intestazione, ...corpo, rigaScontoNetto('PREZZO NETTO A VOI RISERVATO')],
+    })
+  }
   const rigaTotale = new TableRow({
     cantSplit: true,
     children: [
-      cellaEconomica('TOTALE OFFERTA (IVA esclusa)', COL[0] + COL[1] + COL[2], {
+      // Come nelle offerte Biglia storiche: "PREZZO TOTALE DELLA FORNITURA"; l'IVA è detta solo nelle
+      // condizioni ("I prezzi si intendono al netto dell'IVA").
+      cellaEconomica('PREZZO TOTALE DELLA FORNITURA', COL[0] + COL[1] + COL[2], {
         intestazione: true,
         destra: true,
         span: 3,
@@ -354,13 +394,33 @@ function tabellaEconomica(righe, totale) {
   return new Table({
     width: { size: LARGHEZZA_TESTO, type: WidthType.DXA },
     columnWidths: COL,
-    rows: [intestazione, ...corpo, rigaTotale],
+    rows: [
+      intestazione,
+      ...corpo,
+      rigaTotale,
+      ...(sconto
+        ? [
+            new TableRow({
+              cantSplit: true,
+              children: [
+                cellaEconomica(
+                  `SCONTO ${new Intl.NumberFormat('it-IT', { maximumFractionDigits: 2 }).format(sconto.percentuale)}%`,
+                  COL[0] + COL[1] + COL[2],
+                  { destra: true, span: 3, dim: DIM_CORPO }
+                ),
+                cellaEconomica(`- EUR ${formattaImporto(sconto.importoSconto)}`, COL[3], { destra: true, dim: DIM_CORPO }),
+              ],
+            }),
+            rigaScontoNetto('PREZZO NETTO A VOI RISERVATO'),
+          ]
+        : []),
+    ],
   })
 }
 
 // Scheda di sintesi in testa all'offerta: totale in evidenza + dati commerciali chiave,
 // così chi legge trova subito prezzo, consegna, pagamento, garanzia e validità.
-function schedaSintesi(offerta, modello, numeroVoci) {
+function schedaSintesi(offerta, modello, numeroVoci, sconto = null) {
   const META = LARGHEZZA_TESTO / 2
   const bordi = bordiColore(GRIGIO_BORDO)
   const totaleAccessori = Number(offerta.totale) - Number(offerta.prezzo_base_snapshot)
@@ -399,7 +459,7 @@ function schedaSintesi(offerta, modello, numeroVoci) {
         cantSplit: true,
         children: [
           barra('SINTESI DELL’OFFERTA', false),
-          barra(`EUR ${formattaImporto(offerta.totale)}`, true),
+          barra(`EUR ${formattaImporto(sconto ? sconto.netto : offerta.totale)}`, true),
         ],
       }),
       riga(campo('Macchina', modello.nome_commerciale, true), campo('Consegna', offerta.consegna)),
@@ -481,7 +541,9 @@ function costruisciPiePagina(numeroOfferta) {
   })
 }
 
-export async function generaWordOfferta(offerta) {
+// opzioni.scontoModalita: con uno sconto, 'mostra' (SCONTO x% + netto riservato) o 'netto' (solo netto).
+export async function generaWordOfferta(offerta, { scontoModalita = 'mostra' } = {}) {
+  const sconto = calcolaSconto(offerta.totale, offerta.sconto_percentuale)
   const { clienti: cliente, modelli: modello, voci_selezionate: voci } = offerta
   const logoRun = await caricaImmagine(logo, 200)
   const badgeRun = await caricaImmagine(isoBadge, 55)
@@ -496,9 +558,16 @@ export async function generaWordOfferta(offerta) {
   const rigaDest = (testo, bold = false) =>
     new Paragraph({ spacing: { after: 0 }, children: [run(testo, { size: 24, bold })] })
   const destinatario = [rigaDest('Spett.le')]
-  destinatario.push(rigaDest(cliente?.ragione_sociale ? cliente.ragione_sociale.toUpperCase() : '—', true))
-  if (cliente?.indirizzo) destinatario.push(rigaDest(cliente.indirizzo))
-  if (cliente?.citta) destinatario.push(rigaDest(cliente.citta))
+  if (cliente?.ragione_sociale) {
+    destinatario.push(rigaDest(cliente.ragione_sociale.toUpperCase(), true))
+    if (cliente.indirizzo) destinatario.push(rigaDest(cliente.indirizzo))
+    if (cliente.citta) destinatario.push(rigaDest(cliente.citta))
+  } else {
+    // Offerta senza cliente: segnaposto tra parentesi quadre, da completare a mano nel Word.
+    destinatario.push(rigaDest('[RAGIONE SOCIALE CLIENTE]', true))
+    destinatario.push(rigaDest('[Indirizzo]'))
+    destinatario.push(rigaDest('[CAP Città (Prov.)]'))
+  }
   if (cliente?.referente_nome) destinatario.push(rigaDest(`Alla C.A. ${cliente.referente_nome}`))
   children.push(
     new Table({
@@ -539,7 +608,7 @@ export async function generaWordOfferta(offerta) {
       { after: 150 }
     )
   )
-  children.push(schedaSintesi(offerta, modello, voci.length))
+  children.push(schedaSintesi(offerta, modello, voci.length, sconto))
   children.push(paragrafo([], { after: 120 }))
 
   // Titolo macchina centrato: "Tornio BIGLIA" / "Mod. B 620 ..." (prime due righe della descrizione base).
@@ -592,12 +661,27 @@ export async function generaWordOfferta(offerta) {
   }
 
   if (modello.specifiche_tecniche?.length > 0) {
-    children.push(titoloSezione('CARATTERISTICHE TECNICHE'))
+    // Le caratteristiche tecniche partono sempre da una pagina nuova.
+    children.push(titoloSezione('CARATTERISTICHE TECNICHE', { nuovaPagina: true }))
     const unita = unitaSpecifiche(modello.specifiche_tecniche)
     const corta = (u) => u.righe.length > 0 && u.righe.length <= 8
+    // Gruppo "in dotazione": è ciò che è compreso nel prezzo, quindi riquadro dedicato e
+    // tabelle con bordo bronzo (il resto delle caratteristiche resta in grigio).
+    const eDotazione = (u) => /^(in )?dotazione$/i.test((u.padre || '').trim())
+    let dotazioneAperta = false
     for (let k = 0; k < unita.length; k++) {
       const u = unita[k]
       const prossima = unita[k + 1]
+      if (eDotazione(u)) {
+        if (!dotazioneAperta) {
+          children.push(riquadro('IN DOTAZIONE', { size: 24 }))
+          dotazioneAperta = true
+        }
+        if (u.titolo && !/^(in )?dotazione:?$/i.test(u.titolo.trim())) children.push(sottotitolo(u.titolo, 60))
+        if (u.righe.length > 0) children.push(tabellaSpecifiche(u.righe, { evidenza: true }))
+        continue
+      }
+      dotazioneAperta = false
       // Si affiancano solo sottogruppi dello stesso gruppo (es. asse Z e asse X della slitta a croce).
       if (corta(u) && prossima && corta(prossima) && u.padre && u.padre === prossima.padre) {
         children.push(coppiaAffiancata(u, prossima))
@@ -726,7 +810,7 @@ export async function generaWordOfferta(offerta) {
       importo: Number(v.prezzo_snapshot) * (v.quantita || 1),
     })),
   ]
-  children.push(tabellaEconomica(righeEconomiche, offerta.totale))
+  children.push(tabellaEconomica(righeEconomiche, offerta.totale, sconto, scontoModalita))
   children.push(paragrafo([], { after: 80 }))
 
   children.push(titoloSezione('CONDIZIONI DI FORNITURA'))

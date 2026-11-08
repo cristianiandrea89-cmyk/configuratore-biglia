@@ -9,6 +9,7 @@ export async function creaOfferta({
   cittaData,
   condizioni,    // { consegna, resa, collaudo, messa_in_funzione, corso_programmazione, pagamento, garanzia, validita_offerta }
   creatoDa,
+  scontoPercentuale, // % di sconto (facoltativa); la colonna esiste solo dopo migration_sconto.sql
 }) {
   const anno = new Date().getFullYear()
   const { data: numero, error: errNumero } = await supabase.rpc('genera_numero_offerta', { anno_input: anno })
@@ -35,6 +36,8 @@ export async function creaOfferta({
       pagamento: condizioni?.pagamento || null,
       garanzia: condizioni?.garanzia || null,
       validita_offerta: condizioni?.validita_offerta || null,
+      // La chiave si invia solo con uno sconto: così senza sconto funziona anche prima della migrazione.
+      ...(scontoPercentuale > 0 ? { sconto_percentuale: scontoPercentuale } : {}),
       creato_da: creatoDa,
     })
     .select()
@@ -61,7 +64,8 @@ export async function creaOfferta({
 // Aggiorna un'offerta esistente (bozza ripresa dal configuratore): sostituisce
 // interamente le offerte_voci invece di fare un diff, più semplice e sicuro
 // dato che l'utente riparte sempre dall'intera configurazione in memoria.
-export async function aggiornaOfferta(id, { clienteId, modello, vociSelezionate, titolo, cittaData, condizioni }) {
+// scontoPercentuale: undefined = non toccare; null = rimuovi lo sconto; numero = imposta.
+export async function aggiornaOfferta(id, { clienteId, modello, vociSelezionate, titolo, cittaData, condizioni, scontoPercentuale }) {
   const totale =
     modello.prezzo_base + vociSelezionate.reduce((sum, v) => sum + Number(v.prezzo) * (v.quantita || 1), 0)
 
@@ -82,6 +86,7 @@ export async function aggiornaOfferta(id, { clienteId, modello, vociSelezionate,
       pagamento: condizioni?.pagamento || null,
       garanzia: condizioni?.garanzia || null,
       validita_offerta: condizioni?.validita_offerta || null,
+      ...(scontoPercentuale !== undefined ? { sconto_percentuale: scontoPercentuale > 0 ? scontoPercentuale : null } : {}),
     })
     .eq('id', id)
   if (errOfferta) throw errOfferta
