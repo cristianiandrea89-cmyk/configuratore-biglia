@@ -1,5 +1,95 @@
 [
   {
+    "id": "tmpb620mn425021126",
+    "cliente": "TMP",
+    "modello": "B620-M",
+    "numero": "425",
+    "data": "2026-11-02",
+    "dataNota": null,
+    "totale": 159100,
+    "file_origine": "tmp-B620-M(n.425-021126)"
+  },
+  {
+    "id": "mesbigliab620ysn411201026",
+    "cliente": "MES",
+    "modello": "B620-YS",
+    "numero": "411",
+    "data": "2026-10-20",
+    "dataNota": null,
+    "totale": 196400,
+    "file_origine": "mes-biglia B620 YS(n.411-201026)"
+  },
+  {
+    "id": "mesbigliab750ysn410201026",
+    "cliente": "MES",
+    "modello": "B750YS",
+    "numero": "410",
+    "data": "2026-10-20",
+    "dataNota": null,
+    "totale": 233000,
+    "file_origine": "mes-biglia B750 YS(n.410-201026)"
+  },
+  {
+    "id": "collidrillbigliab1250ysn320rev1180926",
+    "cliente": "COLLIDRILL",
+    "modello": "B1250YS",
+    "numero": "320",
+    "data": "2026-09-18",
+    "dataNota": null,
+    "totale": 302870,
+    "file_origine": "COLLIDRILL - BIGLIA B1250 YS (N.320rev.1-180926)"
+  },
+  {
+    "id": "gramb620smn36318092026",
+    "cliente": "GRAM",
+    "modello": "B620-SM",
+    "numero": "363",
+    "data": "2026-09-18",
+    "dataNota": null,
+    "totale": 200560,
+    "file_origine": "gram-B620-SM(n.363-18092026)"
+  },
+  {
+    "id": "imarbigliab620ysasa6n315030826",
+    "cliente": "IMAR",
+    "modello": "B620-YS",
+    "numero": "315",
+    "data": "2026-08-03",
+    "dataNota": null,
+    "totale": 208340,
+    "file_origine": "IMAR - BIGLIA B620 YS ASA6 (N.315-030826)"
+  },
+  {
+    "id": "imarb620ysn316030826",
+    "cliente": "IMAR",
+    "modello": "B620-YS",
+    "numero": "316",
+    "data": "2026-08-03",
+    "dataNota": null,
+    "totale": 238070,
+    "file_origine": "IMAR-B620-YS n.316 030826"
+  },
+  {
+    "id": "novusb750ysn305290726",
+    "cliente": "NOVUS",
+    "modello": "B750YS",
+    "numero": "305",
+    "data": "2026-07-29",
+    "dataNota": null,
+    "totale": 288220,
+    "file_origine": "novus - B750 YS(N.305-290726)"
+  },
+  {
+    "id": "europatradingbigliabmx45y2n290230726",
+    "cliente": "EUROPA TRADING",
+    "modello": "BMX45Y2",
+    "numero": "290",
+    "data": "2026-07-23",
+    "dataNota": null,
+    "totale": 285810,
+    "file_origine": "europa tradingBIGLIA BMX 45Y2 (N.290-230726)"
+  },
+  {
     "id": "maceramasterb1250mn251300626",
     "cliente": "MACERA",
     "modello": "B1250M",
