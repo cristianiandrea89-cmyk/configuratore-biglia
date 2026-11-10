@@ -1,4 +1,59 @@
 {
+  "B620-Y": {
+    "totaleOfferte": 3,
+    "voci": [
+      {
+        "codice": null,
+        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "pompasupplementareavitepressione40barottenibileconforodiusci",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
+        "conteggio": 3
+      },
+      {
+        "codice": null,
+        "descNorm": "provaesecuzioneprogrammaconvolantino",
+        "conteggio": 3
+      },
+      {
+        "codice": "T016-00352",
+        "descNorm": "autocentrantea3griffedia250mmforo77mm",
+        "conteggio": 3
+      },
+      {
+        "codice": "T134-00210A",
+        "descNorm": "wtopinzaer32",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.88.16.00",
+        "descNorm": "portautensileradiale25x25",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.00",
+        "descNorm": "portabarenodia32h80",
+        "conteggio": 3
+      },
+      {
+        "codice": "10.57.75.03.1",
+        "descNorm": "tappodia32",
+        "conteggio": 3
+      },
+      {
+        "codice": "41.07.02.10",
+        "descNorm": "puntalinoarrestobarra",
+        "conteggio": 3
+      }
+    ]
+  },
   "B1250YS": {
     "totaleOfferte": 2,
     "voci": [
@@ -721,61 +776,6 @@
         "codice": "T016-00348",
         "descNorm": "autocentrantea3griffedia210mmforo66mm",
         "conteggio": 1
-      }
-    ]
-  },
-  "B620-Y": {
-    "totaleOfferte": 2,
-    "voci": [
-      {
-        "codice": null,
-        "descNorm": "tastatoreelettronicoperlazzeramentoutensileedeltipobasculant",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "automazioneperaperturachiusuraportascorrevoleanteriorecomand",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "pompasupplementareavitepressione40barottenibileconforodiusci",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "kitdiforaturapercontropuntacomprendenteflangiaportapuntadia4",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "disoleatoreperlaseparazionedelloliodilubrificazionedelleguid",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "pistolaperlavaggiomacchinaafinelavoro",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "impiantoarialiquidosutorrettaunoescludelaltronelpassaggiodal",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "nastrinofrontalealtorniofornitoinsostituzionedelcontenitorea",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "palettaescivoloperloscaricodeipezzilavoratifinoadunalunghezz",
-        "conteggio": 2
-      },
-      {
-        "codice": null,
-        "descNorm": "fermoregolabileinternoalmandrinoprincipaleasa5asa6",
-        "conteggio": 2
       }
     ]
   },
