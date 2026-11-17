@@ -4,7 +4,7 @@
 // In modalità demo sono nascosti: Bozze, Storico (offerte passate), Aggiorna prezzi, elenco clienti e
 // suggerimenti basati sullo storico. Il campo Sconto resta disponibile (si può mostrare la funzione).
 // Non è una protezione dei dati (il database resta raggiungibile da chi lo sa fare): serve solo a non mostrarli a schermo.
-import { CHIAVE_DEMO } from './accesso'
+const CHIAVE_DEMO = 'configuratore_biglia_demo'
 
 // Con VITE_SOLO_DEMO=true (deploy dedicato alla demo, es. un secondo progetto Vercel) la modalità presentazione
 // è sempre attiva e non si può spegnere con ?demo=0.
