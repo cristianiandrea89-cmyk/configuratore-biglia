@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { modalitaDemo } from '../lib/modalitaDemo'
+import { CHIAVE_SBLOCCO, CHIAVE_SBLOCCO_DEMO } from '../lib/accesso'
 
 // Barriera semplice con password condivisa: non è vera autenticazione — la password viene inclusa nel
 // bundle JS del sito (visibile a chi lo ispeziona) e il database ha comunque accesso aperto — serve solo a
@@ -11,7 +12,7 @@ import { modalitaDemo } from '../lib/modalitaDemo'
 export default function LoginGate({ children }) {
   const demo = modalitaDemo()
   const PASSWORD = demo ? import.meta.env.VITE_DEMO_PASSWORD : import.meta.env.VITE_ACCESS_PASSWORD
-  const STORAGE_KEY = demo ? 'configuratore_biglia_unlocked_demo' : 'configuratore_biglia_unlocked'
+  const STORAGE_KEY = demo ? CHIAVE_SBLOCCO_DEMO : CHIAVE_SBLOCCO
   const [unlocked, setUnlocked] = useState(() => {
     try {
       return localStorage.getItem(STORAGE_KEY) === 'true'
@@ -39,9 +40,14 @@ export default function LoginGate({ children }) {
   if (unlocked) return children
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-dgray px-5">
+    <div className={`min-h-screen flex items-center justify-center px-5 ${demo ? 'bg-bronze' : 'bg-dgray'}`}>
       <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 w-full max-w-xs space-y-4">
         <h1 className="font-heading font-extrabold uppercase text-xl text-center">Configuratore Biglia</h1>
+        <p className="text-center">
+          <span className={`rounded-sm px-2 py-0.5 text-[11px] font-bold tracking-wider ${demo ? 'bg-bronze text-dgray' : 'bg-dgray text-offwhite'}`}>
+            {demo ? 'ACCESSO DEMO' : 'ACCESSO INTERNO'}
+          </span>
+        </p>
         <div>
           <label className="block text-sm font-medium mb-1">Password</label>
           <input

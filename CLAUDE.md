@@ -145,7 +145,7 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   in OneDrive: 02_Configuratori/CONFIGURATORE BIGLIA/Backup configuratore listino 01-2026….json. Le offerte già fatte mantengono i prezzi 01/2026 (snapshot).
 - **Modalità presentazione** (`src/lib/modalitaDemo.js`): aprendo il sito con `?demo=1` si nasconde ciò che non va
   mostrato a terzi (es. Biglia): Bozze, Storico, Aggiorna prezzi, elenco clienti e Suggerimenti da storico (il campo
-  Sconto resta visibile); le rotte nascoste rimandano a `/`. Resta attiva sul dispositivo (localStorage) finché non si apre `?demo=0`.
+  Sconto resta visibile); le rotte nascoste rimandano a `/`. Vale solo per la sessione del browser (sessionStorage): chiudendo/riaprendo il sito o aprendolo senza `?demo=1` si torna alla versione completa. Barra bronzo + etichetta DEMO in demo, barra scura + etichetta INTERNO nella versione completa; il pulsante "Esci" (src/lib/accesso.js) azzera lo sblocco e riporta alla password.
   Non è una protezione dei dati (il DB resta raggiungibile): le offerte/clienti creati durante la demo vanno poi
   eliminati a mano.
   Password separata per la demo: in modalità presentazione `LoginGate` accetta solo `VITE_DEMO_PASSWORD` (chiave di

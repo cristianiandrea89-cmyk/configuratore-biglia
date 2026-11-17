@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { modalitaDemo } from './lib/modalitaDemo'
 import NavBar from './components/NavBar'
@@ -12,13 +13,19 @@ import AggiornaPrezziPage from './pages/AggiornaPrezziPage'
 
 function App() {
   const demo = modalitaDemo()
+  // Titolo della scheda del browser diverso in demo: si distingue anche tra più schede aperte.
+  useEffect(() => {
+    document.title = demo ? 'DEMO · Configuratore Biglia' : 'Configuratore Biglia'
+  }, [demo])
   return (
     <LoginGate>
       <CurrentUserProvider>
       <BrowserRouter>
         <NavBar />
         {demo && (
-          <div className="bg-bronze py-1 text-center text-xs font-medium text-dgray">Modalità presentazione</div>
+          <div className="bg-dgray py-1.5 text-center text-xs font-bold uppercase tracking-wider text-bronze">
+            Modalità presentazione · versione dimostrativa
+          </div>
         )}
         <main className="mx-auto max-w-5xl px-5 py-8">
           <Routes>
