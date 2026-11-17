@@ -144,8 +144,8 @@ Le chiavi (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) vanno in `.env` (vedi 
   poligonatore T134-00238, e i testi dei Master ed. 09/2026 (Biglia li invia per e-mail). Backup dello stato 01/2026
   in OneDrive: 02_Configuratori/CONFIGURATORE BIGLIA/Backup configuratore listino 01-2026….json. Le offerte già fatte mantengono i prezzi 01/2026 (snapshot).
 - **Modalità presentazione** (`src/lib/modalitaDemo.js`): aprendo il sito con `?demo=1` si nasconde ciò che non va
-  mostrato a terzi (es. Biglia): Bozze, Storico, Aggiorna prezzi, elenco clienti, Suggerimenti da storico e campo
-  Sconto; le rotte nascoste rimandano a `/`. Resta attiva sul dispositivo (localStorage) finché non si apre `?demo=0`.
+  mostrato a terzi (es. Biglia): Bozze, Storico, Aggiorna prezzi, elenco clienti e Suggerimenti da storico (il campo
+  Sconto resta visibile); le rotte nascoste rimandano a `/`. Resta attiva sul dispositivo (localStorage) finché non si apre `?demo=0`.
   Non è una protezione dei dati (il DB resta raggiungibile): le offerte/clienti creati durante la demo vanno poi
   eliminati a mano.
   Password separata per la demo: in modalità presentazione `LoginGate` accetta solo `VITE_DEMO_PASSWORD` (chiave di

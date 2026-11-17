@@ -840,7 +840,7 @@ export default function NuovaOffertaPage() {
       )}
 
       {modello && (
-        <TotaleBar totale={totale} sconto={modalitaDemo() ? undefined : { valore: sconto, onChange: setSconto, calcolo: scontoCalcolato }}>
+        <TotaleBar totale={totale} sconto={{ valore: sconto, onChange: setSconto, calcolo: scontoCalcolato }}>
           <Button variant="primary" onClick={handleGenera} disabled={salvataggio}>
             {salvataggio ? 'Salvataggio…' : modificaId ? 'Salva modifiche' : 'Genera offerta'}
           </Button>

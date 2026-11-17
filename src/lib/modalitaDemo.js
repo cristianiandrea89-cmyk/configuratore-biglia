@@ -1,7 +1,7 @@
 // Modalità presentazione: per mostrare il configuratore a terzi (es. Biglia) senza far vedere i dati reali.
 // Si attiva aprendo il sito con ?demo=1 (resta attiva su quel dispositivo) e si disattiva con ?demo=0.
 // In modalità demo sono nascosti: Bozze, Storico (offerte passate), Aggiorna prezzi, elenco clienti,
-// suggerimenti basati sullo storico e il campo Sconto. Non è una protezione dei dati (il database resta
+// e suggerimenti basati sullo storico. Il campo Sconto resta disponibile (si può mostrare la funzione). Non è una protezione dei dati (il database resta
 // raggiungibile da chi lo sa fare): serve solo a non mostrarli a schermo.
 const CHIAVE = 'configuratore_biglia_demo'
 
