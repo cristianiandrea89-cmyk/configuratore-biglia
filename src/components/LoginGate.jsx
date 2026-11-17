@@ -1,14 +1,17 @@
 import { useState } from 'react'
+import { modalitaDemo } from '../lib/modalitaDemo'
 
 // Barriera semplice con password condivisa: non è vera autenticazione — la password viene inclusa nel
 // bundle JS del sito (visibile a chi lo ispeziona) e il database ha comunque accesso aperto — serve solo a
 // tenere fuori i curiosi occasionali. Si sblocca una volta per dispositivo (localStorage).
 // La password NON sta nel repository: arriva dalla variabile d'ambiente VITE_ACCESS_PASSWORD (file .env in
 // locale, Settings > Environment Variables su Vercel). Se manca, l'accesso resta bloccato.
-const PASSWORD = import.meta.env.VITE_ACCESS_PASSWORD
-const STORAGE_KEY = 'configuratore_biglia_unlocked'
-
+// In modalità presentazione (demo) vale una password DIVERSA, VITE_DEMO_PASSWORD, da dare a chi non è
+// dell'azienda (es. Biglia): non sblocca la versione completa e la password interna non va comunicata.
 export default function LoginGate({ children }) {
+  const demo = modalitaDemo()
+  const PASSWORD = demo ? import.meta.env.VITE_DEMO_PASSWORD : import.meta.env.VITE_ACCESS_PASSWORD
+  const STORAGE_KEY = demo ? 'configuratore_biglia_unlocked_demo' : 'configuratore_biglia_unlocked'
   const [unlocked, setUnlocked] = useState(() => {
     try {
       return localStorage.getItem(STORAGE_KEY) === 'true'
@@ -52,7 +55,7 @@ export default function LoginGate({ children }) {
             className="w-full border border-gray/40 rounded-sm px-3 py-2 focus:border-bronze outline-none"
           />
         </div>
-        {!PASSWORD && <p className="text-sm text-red-600">Accesso non configurato: manca VITE_ACCESS_PASSWORD.</p>}
+        {!PASSWORD && <p className="text-sm text-red-600">Accesso non configurato: manca {demo ? 'VITE_DEMO_PASSWORD' : 'VITE_ACCESS_PASSWORD'}.</p>}
         {error && <p className="text-sm text-red-600">{error}</p>}
         <button
           type="submit"

@@ -11,6 +11,7 @@ import VoceOpzionaleRow from '../components/VoceOpzionaleRow'
 import TotaleBar from '../components/TotaleBar'
 import NomeUtenteInline from '../components/NomeUtenteInline'
 import { calcolaSconto, leggiPercentuale } from '../lib/sconto'
+import { modalitaDemo } from '../lib/modalitaDemo'
 import Button from '../components/Button'
 import { separaTitoloVoce, separaCaratteristicheTecniche, raggruppaSpecifiche, MACRO_SEZIONE_RE } from '../lib/testoVoce'
 import noteVoci from '../data/noteVoci.json'
@@ -139,7 +140,8 @@ export default function NuovaOffertaPage() {
   const [sezioniAttrezziAperte, setSezioniAttrezziAperte] = useState({})
 
   useEffect(() => {
-    fetchClienti().then(setClienti).catch((e) => setErrore(e.message))
+    // Modalità presentazione: l'elenco dei clienti reali non viene caricato.
+    if (!modalitaDemo()) fetchClienti().then(setClienti).catch((e) => setErrore(e.message))
     fetchModelliAttivi().then(setModelli).catch((e) => setErrore(e.message))
     // In modalità modifica le condizioni arrivano dalla bozza stessa (sotto):
     // caricare qui anche quelle standard creerebbe una corsa fra le due
@@ -218,7 +220,8 @@ export default function NuovaOffertaPage() {
   // abbinare lo storico: si calcolano quando il modello è caricato, a
   // prescindere dal cliente.
   useEffect(() => {
-    if (!modello) {
+    // Modalità presentazione: niente suggerimenti, derivano dallo storico reale.
+    if (!modello || modalitaDemo()) {
       setPopolariVoci([])
       return
     }
@@ -837,7 +840,7 @@ export default function NuovaOffertaPage() {
       )}
 
       {modello && (
-        <TotaleBar totale={totale} sconto={{ valore: sconto, onChange: setSconto, calcolo: scontoCalcolato }}>
+        <TotaleBar totale={totale} sconto={modalitaDemo() ? undefined : { valore: sconto, onChange: setSconto, calcolo: scontoCalcolato }}>
           <Button variant="primary" onClick={handleGenera} disabled={salvataggio}>
             {salvataggio ? 'Salvataggio…' : modificaId ? 'Salva modifiche' : 'Genera offerta'}
           </Button>

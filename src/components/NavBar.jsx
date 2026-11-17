@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { FilePlus2, FileClock, History, Tags } from 'lucide-react'
+import { modalitaDemo } from '../lib/modalitaDemo'
 
 const links = [
   { to: '/', label: 'Nuova offerta', icon: FilePlus2, end: true },
@@ -8,6 +9,9 @@ const links = [
 ]
 
 export default function NavBar() {
+  const demo = modalitaDemo()
+  // Modalità presentazione: solo "Nuova offerta" (niente Bozze, Storico, Aggiorna prezzi).
+  const voci = demo ? links.filter((l) => l.to === '/') : links
   return (
     <nav className="sticky top-0 z-10 flex items-center justify-between gap-3 bg-dgray px-4 py-4 sm:px-5">
       <div className="font-heading font-extrabold uppercase tracking-wide text-offwhite text-lg whitespace-nowrap">
@@ -15,7 +19,7 @@ export default function NavBar() {
         <span className="hidden sm:inline">Configuratore Biglia</span>
       </div>
       <div className="flex items-center gap-5 sm:gap-6 overflow-x-auto">
-        {links.map(({ to, label, icon: Icon, end }) => (
+        {voci.map(({ to, label, icon: Icon, end }) => (
           <NavLink
             key={to}
             to={to}
@@ -30,6 +34,7 @@ export default function NavBar() {
             <span className="hidden sm:inline">{label}</span>
           </NavLink>
         ))}
+        {!demo && (
         <NavLink
           to="/aggiorna-prezzi"
           className={({ isActive }) =>
@@ -41,6 +46,7 @@ export default function NavBar() {
           <Tags className="w-6 h-6 sm:w-4 sm:h-4" strokeWidth={1.5} />
           <span className="hidden sm:inline">Aggiorna prezzi</span>
         </NavLink>
+        )}
       </div>
     </nav>
   )
